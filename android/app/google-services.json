@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "941119396354",
+    "project_id": "teamduel-4f764",
+    "storage_bucket": "teamduel-4f764.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941119396354:android:f7d5d04c894592ba6e251b",
+        "android_client_info": {
+          "package_name": "com.example.winx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941119396354-uns7k09kcmf0jt67sest7sm6l0akscjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRrEDGf0Q4OjymQeQJArIliIsuCC6Uu2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941119396354-uns7k09kcmf0jt67sest7sm6l0akscjd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "941119396354-r8mlj4am1be51kif2vpquo5a4lgn4rdk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.winxiOS"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7093216290853733~8370117838"
+    }
+  ],
+  "configuration_version": "1"
+}
