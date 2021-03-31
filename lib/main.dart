@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:winx/providers/cricketStates.dart';
 import 'package:winx/providers/horse.dart';
@@ -17,6 +20,7 @@ import 'package:winx/screens/onBoardingScreen.dart';
 import 'package:winx/screens/raceMeets.dart';
 import 'package:winx/screens/splashScreen.dart';
 import 'package:winx/screens/timer.dart';
+import 'package:winx/services/admob_services.dart';
 
 import 'screens/cricket/matchups/matchUpsHome.dart';
 import 'screens/cricket/matchups/myMatchUps.dart';
@@ -28,8 +32,14 @@ import 'screens/getTransactionHistory.dart';
 import 'screens/pickHorseScreen.dart';
 import 'styles/colors.dart';
 
-void main() {
-  // Admob.initialize();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // AdmobService ams = AdmobService();
+  // Admob.initialize(testDeviceIds: [ams.getAdMobId()]);
+  MobileAds.instance.initialize();
+  if (Platform.isIOS) {
+    await Admob.requestTrackingAuthorization();
+  }
   runApp(MyApp());
   ErrorWidget.builder = (FlutterErrorDetails details) {
     bool inDebug = false;
@@ -44,7 +54,7 @@ void main() {
     return Container(
       alignment: Alignment.center,
       child: Text(
-        'Error! ${details.exception} ${details.context} ${details.informationCollector} ${details.library}',
+        'Error! ${details.exception} ${details.context}  ${details.library}',
         style: TextStyle(color: Colors.yellow, fontSize: 14),
         textDirection: TextDirection.ltr,
       ),
@@ -100,12 +110,13 @@ class MyApp extends StatelessWidget {
                       return SplashScreen();
                     }
                     if (snap.connectionState == ConnectionState.done) {
-                      if (snap.data) {
+                      if (snap.data ?? false) {
                         return MatchUpHome();
                       } else {
                         return OnboardingScreen();
                       }
                     }
+                    return CircularProgressIndicator();
                   },
                 )),
       ),
