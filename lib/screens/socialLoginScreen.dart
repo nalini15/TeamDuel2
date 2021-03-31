@@ -63,7 +63,7 @@ class _SocialLoginState extends State<SocialLogin> {
                             width: double.infinity,
                             height: buildHeight(context) * 0.10,
                             child: Text(
-                              stringList,
+                              stringList.toString(),
                               textAlign: TextAlign.center,
                               style: GoogleFonts.poppins(
                                   color: Colors.red, fontSize: 18),

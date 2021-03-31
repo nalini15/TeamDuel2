@@ -31,7 +31,7 @@ dependencies:
   pin_code_text_field: ^1.6.0
   google_sign_in: ^4.5.1
   shared_preferences:
-  # flutter_facebook_login: ^3.0.0
+  flutter_facebook_login: ^3.0.0
   slide_countdown_clock: ^1.0.3
   flutter_countdown_timer: ^1.1.0
   dio: ^3.0.9

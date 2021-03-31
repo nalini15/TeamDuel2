@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 // import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -292,79 +293,81 @@ class Auth with ChangeNotifier {
   }
 
   Future<Map<String, dynamic>> loginFacebook() async {
-    // final facebookLogin = FacebookLogin();
+    final facebookLogin = FacebookLogin();
     Map<String, dynamic> resp = {'msg': '', 'status': false};
-    // try {
-    //   final result = await facebookLogin.logIn(['email']);
-    //   final token = result.accessToken.token;
-    //   final graphResponse = await http.get(
-    //       'https://graph.facebook.com/v2.12/me?fields=name,first_name,last_name,email&access_token=${token}');
-    //   final profile = json.decode(graphResponse.body);
-    //   print(profile);
-    //   if (profile.containsKey('email')) {
-    //     Map<String, String> userData = {
-    //       "email": profile['email'],
-    //       "name": profile['first_name'] + profile['last_name'],
-    //       "provider": "facebook",
-    //       "provider_id": profile['id'],
-    //     };
-    //     final res = await http.post(
-    //         'http://app.myteamduel.com/api/v1/social-media-login',
-    //         headers: headers,
-    //         body: userData);
-    //     final response = json.decode(res.body) as Map<dynamic, dynamic>;
-    //     print(response);
-    //     if (response['error'] != null || !response['status']) {
-    //       resp['msg'] = response['error'];
-    //       resp['status'] = response['status'];
-    //       return resp;
-    //     }
-    //     SharedPreferences prefs = await SharedPreferences.getInstance();
-    //     this._token = response['data']['password_token'];
-    //     prefs.setInt('userId', response['data']['id']);
-    //     this._userId = response['data']['id'];
+    try {
+      final result = await facebookLogin.logIn(['email']);
+      final token = result.accessToken.token;
+      final graphResponse = await http.get(
+          'https://graph.facebook.com/v2.12/me?fields=name,first_name,last_name,email&access_token=${token}');
+      final profile = json.decode(graphResponse.body);
+      print(profile);
+      if (profile.containsKey('email')) {
+        Map<String, String> userData = {
+          "email": profile['email'],
+          "name": profile['first_name'] + profile['last_name'],
+          "provider": "facebook",
+          "provider_id": profile['id'],
+        };
+        final res = await http.post(
+            'http://app.myteamduel.com/api/v1/social-media-login',
+            headers: headers,
+            body: userData);
+        final response = json.decode(res.body) as Map<dynamic, dynamic>;
+        print(response);
+        if (response['error'] != null || !response['status']) {
+          resp['msg'] = response['error'];
+          resp['status'] = response['status'];
+          return resp;
+        }
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        this._token = response['data']['password_token'];
+        prefs.setInt('userId', response['data']['id']);
+        this._userId = response['data']['id'];
 
-    //     prefs.setString('token', response['data']['password_token']);
-    //     _userLogin.add(UserLogin(
-    //       adminType: response['data']['admin_type'],
-    //       bonusChips: response['data']['bonus_chips'],
-    //       city: response['data']['city'],
-    //       country: response['data']['country'],
-    //       dob: response['data']['dob'].toString(),
-    //       email: response['data']['email'],
-    //       gender: response['data']['gender'],
-    //       id: response['data']['id'],
-    //       img: response['data']['img'],
-    //       lastLogin: response['data']['last_login'],
-    //       mobileNumber: response['data']['mobile_number'],
-    //       name: response['data']['name'],
-    //       passwordToken: response['data']['password_token'],
-    //       pincode: response['data']['pincode'],
-    //       provider: response['data']['provider'],
-    //       providerId: response['data']['provider_id'],
-    //       referalCode: response['data']['referl_code'],
-    //       roleId: response['data']['role_id'],
-    //       state: response['data']['state'],
-    //       status: response['data']['status'],
-    //       teamName: response['data']['team_name'],
-    //       userWalletCurrentAmount: response['data']
-    //           ['user_wallet_current_amount'],
-    //       winnings: response['data']['winnings'],
-    //     ));
-    //     print('done');
-    //     resp['msg'] = response['msg'];
-    //     resp['status'] = response['status'];
-    //     return response;
-    //   } else {
-    //     resp['msg'] =
-    //         "Your facebook account doesn't provide a email-id.\nPlease login with other platform";
-    //     resp['status'] = false;
-    //     return resp;
-    //   }
-    // } catch (e) {
-    //   resp['msg'] = "Something went wrong please try again later!";
-    //   resp['status'] = false;
-    // }
+        prefs.setString('token', response['data']['password_token']);
+        _userLogin.add(UserLogin(
+          adminType: response['data']['admin_type'],
+          bonusChips: response['data']['bonus_chips'],
+          city: response['data']['city'],
+          country: response['data']['country'],
+          dob: response['data']['dob'].toString(),
+          email: response['data']['email'],
+          gender: response['data']['gender'],
+          id: response['data']['id'],
+          img: response['data']['img'],
+          lastLogin: response['data']['last_login'],
+          mobileNumber: response['data']['mobile_number'],
+          name: response['data']['name'],
+          passwordToken: response['data']['password_token'],
+          pincode: response['data']['pincode'],
+          provider: response['data']['provider'],
+          providerId: response['data']['provider_id'],
+          referalCode: response['data']['referl_code'],
+          roleId: response['data']['role_id'],
+          state: response['data']['state'],
+          status: response['data']['status'],
+          teamName: response['data']['team_name'],
+          userWalletCurrentAmount: response['data']
+              ['user_wallet_current_amount'],
+          winnings: response['data']['winnings'],
+        ));
+        print('done');
+        resp['msg'] = response['msg'];
+        resp['status'] = response['status'];
+        return response;
+      } else {
+        resp['msg'] =
+            "Your facebook account doesn't provide a email-id.\nPlease login with other platform";
+        resp['status'] = false;
+        return resp;
+      }
+    } catch (e) {
+      print(e.toString());
+      resp['msg'] = "Something went wrong please try again later!";
+      resp['status'] = false;
+      return resp;
+    }
   }
 
   Future<Map<String, dynamic>> changePassword(

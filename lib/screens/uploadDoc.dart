@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+import 'package:winx/config/colors.dart';
 import 'package:winx/functions/widgetFunc.dart';
 import 'package:winx/providers/user.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -151,13 +152,13 @@ class _UploadDocState extends State<UploadDoc> {
                   opacity: imageURI == null ? 0 : 1,
                   child: Container(
                     width: buildWidth(context) * 0.65,
-                    height: buildHeight(context) * 0.08,
+                    height: 50,
                     child: RaisedButton(
                       onPressed: () {
                         // _modalBottomSheetMenu();
                         _submit(context);
                       },
-                      color: Colors.blue,
+                      color: AppColors.buttonColor,
                       elevation: 4,
                       animationDuration: Duration(milliseconds: 350),
                       shape: RoundedRectangleBorder(
@@ -175,10 +176,10 @@ class _UploadDocState extends State<UploadDoc> {
                   ),
                 ),
                 buildSizedBox(buildHeight(context), 0.04),
-                Text('3 lines KYC registration instructions.......',
-                    style: GoogleFonts.poppins(
-                      color: Colors.black,
-                    ))
+                // Text('3 lines KYC registration instructions.......',
+                //     style: GoogleFonts.poppins(
+                //       color: Colors.black,
+                //     ))
               ],
             ),
           ),

@@ -5,8 +5,12 @@ import 'package:provider/provider.dart';
 import 'package:winx/config/colors.dart';
 import 'package:winx/functions/widgetFunc.dart';
 import 'package:winx/models/wallet.dart';
+import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/cricketStates.dart';
 import 'package:winx/providers/user.dart';
+import 'package:winx/screens/getCoins.dart';
+import 'package:winx/screens/paymentWithdraw.dart';
+import 'package:winx/screens/uploadDoc.dart';
 
 class PayableWinning extends StatefulWidget {
   PayableWinning({Key key}) : super(key: key);
@@ -16,11 +20,44 @@ class PayableWinning extends StatefulWidget {
 }
 
 class _PayableWinningState extends State<PayableWinning> {
+  Future<void> checkKYC(BuildContext context) async {
+    final user = Provider.of<User>(context, listen: false);
+    final res = await user.getKycStatus();
+    if (res['status']) {
+      showSnack(context, res['msg'], _scaffoldkey);
+      Future.delayed(Duration(seconds: 1), () {
+        Navigator.push(context, FadeNavigation(widget: UploadDoc()));
+      });
+    } else {
+      showSnack(context, res['msg'], _scaffoldkey);
+      final response = await user.getPaymentWithdrawQuation();
+
+      print(response);
+      if (!response['status']) {
+        showSnack(context, res['msg'], _scaffoldkey);
+        return;
+      } else {
+        Future.delayed(Duration(seconds: 1), () {
+          Navigator.push(
+              context,
+              FadeNavigation(
+                  widget: PaymentWithdraw(
+                chips: Chips.total,
+                data: response,
+              )));
+        });
+      }
+    }
+  }
+
+  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     final states = Provider.of<CricketStates>(context);
 
     return Scaffold(
+      key: _scaffoldkey,
       backgroundColor: AppColors.mainColor,
       appBar: AppBar(
         backgroundColor: AppColors.mainColor,
@@ -121,12 +158,19 @@ class _PayableWinningState extends State<PayableWinning> {
           buildSizedBox(buildHeight(context), 0.03),
           Center(
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                if (states.payableWining == 0) {
+                  Navigator.of(context)
+                      .push(FadeNavigation(widget: GetCoinsChips()));
+                } else {
+                  checkKYC(context);
+                }
+              },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all(
                       EdgeInsets.symmetric(horizontal: 30)),
                   backgroundColor: MaterialStateProperty.all(Colors.green)),
-              child: Text("Get Coins",
+              child: Text(states.payableWining == 0 ? "Get Coins" : "Withdraw",
                   style: GoogleFonts.poppins(color: Colors.white)),
             ),
           ),

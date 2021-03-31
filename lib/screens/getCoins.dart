@@ -5,6 +5,7 @@ import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:winx/config/colors.dart';
 import 'package:winx/functions/widgetFunc.dart';
@@ -42,7 +43,51 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
         showSnackSuccess(context, "Copied to clipboard", _scaffoldkey));
   }
 
-  Future<void> getCoinsChips(String from) async {
+  final InterstitialAd myInterstitial = InterstitialAd(
+    adUnitId: 'ca-app-pub-3940256099942544/8691691433',
+    request: AdRequest(),
+    listener: AdListener(),
+  );
+
+  final AdListener listener = AdListener(
+    // Called when an ad is successfully received.
+    onAdLoaded: (Ad ad) => print('Ad loaded.'),
+    // Called when an ad request failed.
+    onAdFailedToLoad: (Ad ad, LoadAdError error) {
+      ad.dispose();
+      print('Ad failed to load: $error');
+      // getMaxPayout(
+      //     states.investType == InvestType.chips ? "chips" : "coins", true);
+    },
+    // Called when an ad opens an overlay that covers the screen.
+    onAdOpened: (Ad ad) => print('Ad opened.'),
+    // Called when an ad removes an overlay that covers the screen.
+    onAdClosed: (Ad ad) {
+      ad.dispose();
+      print("asdasdasdadasd");
+      // getMaxPayout(
+      //     states.investType == InvestType.chips ? "chips" : "coins", true);
+    },
+    // Called when an ad is in the process of leaving the application.
+    onApplicationExit: (Ad ad) => print('Left application.'),
+  );
+  Future<void> showCoinsAdd(
+      BuildContext context, String from, String unitId) async {
+    try {
+      await myInterstitial.load();
+      Future.delayed(Duration(seconds: 2), () {
+        myInterstitial.show();
+        Future.delayed(Duration(seconds: 5), () {
+          getCoinsChips(from, unitId);
+        });
+      });
+    } catch (e) {
+      print(e.toString());
+      myInterstitial.dispose();
+    }
+  }
+
+  Future<void> getCoinsChips(String from, String unitId) async {
     final matchups = Provider.of<MatchupsCrickets>(context, listen: false);
     var jsonData = {
       "ad_unit_id": "1212312312",
@@ -83,7 +128,9 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          getCoinsChips("admob");
+                          // getCoinsChips("admob");
+                          showCoinsAdd(context, "video",
+                              "ca-app-pub-3940256099942544/8691691433");
                         },
                         child: Container(
                           height: 140,
@@ -107,7 +154,8 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          getCoinsChips("offerwall");
+                          showCoinsAdd(context, "offerwall",
+                              "ca-app-pub-3940256099942544/8691691433");
                         },
                         child: Container(
                           height: 134,

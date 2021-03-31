@@ -34,7 +34,8 @@ class _SingUpState extends State<SingUp> {
     'password': '',
     'refer_id': '',
     'pincode': '',
-    'state': ''
+    'state': '',
+    'team_name': ''
   };
   String confirmPass = '';
   bool loading = false;
@@ -412,7 +413,7 @@ class _SingUpState extends State<SingUp> {
                     buildSizedBox(buildHeight(context), 0.03),
                     TextFormField(
                       autocorrect: true,
-                      keyboardType: TextInputType.number,
+                      keyboardType: TextInputType.text,
                       cursorColor: Colors.white,
                       style: GoogleFonts.poppins(color: Colors.white),
                       cursorRadius: Radius.circular(10),
@@ -440,15 +441,46 @@ class _SingUpState extends State<SingUp> {
                           border: buildOutlineInputBorder()),
                     ),
                     buildSizedBox(buildHeight(context), 0.03),
+                    TextFormField(
+                      autocorrect: true,
+                      keyboardType: TextInputType.text,
+                      cursorColor: Colors.white,
+                      style: GoogleFonts.poppins(color: Colors.white),
+                      cursorRadius: Radius.circular(10),
+                      validator: (val) {
+                        val = val.trimLeft().trimRight();
+                        if (val.isEmpty) {
+                          return 'Please provide your team name';
+                        }
+                      },
+                      onSaved: (val) {
+                        userData['team_name'] = val;
+                      },
+                      decoration: InputDecoration(
+                          fillColor: AppColors.mainColorLight,
+                          filled: true,
+                          contentPadding: EdgeInsets.symmetric(vertical: 15),
+                          prefixIcon: Icon(
+                            FontAwesomeIcons.users,
+                            color: Colors.white,
+                          ),
+                          hintText: 'Team Name',
+                          hintStyle: GoogleFonts.poppins(
+                              color: Colors.white, fontSize: 12),
+                          focusedBorder: buildOutlineInputBorder(),
+                          border: buildOutlineInputBorder()),
+                    ),
+                    buildSizedBox(buildHeight(context), 0.03),
                     Container(
                       height: referCode ? null : 0,
                       child: AnimatedOpacity(
                         opacity: referCode ? 1 : 0,
                         duration: Duration(seconds: 1),
                         child: TextFormField(
+                          style: GoogleFonts.poppins(color: Colors.white),
                           autocorrect: true,
                           keyboardType: TextInputType.text,
-                          cursorColor: Colors.black,
+                          cursorColor: Colors.white,
                           cursorRadius: Radius.circular(10),
                           decoration: InputDecoration(
                               fillColor: AppColors.mainColorLight,

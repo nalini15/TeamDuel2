@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:winx/config/colors.dart';
 import 'package:winx/functions/widgetFunc.dart';
 import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/user.dart';
@@ -67,6 +68,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.mainColor,
       key: _scaffoldkey,
       appBar: buildAppBarHome(context, 'Payment Withdraw'),
       body: SafeArea(
@@ -115,7 +117,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.poppins(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 15))),
                   buildSizedBox(buildHeight(context), 0.02),
@@ -148,7 +150,9 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                     ? 2
                                                     : 1),
                                       ),
-                                      child: Text('Google Pay')),
+                                      child: Text('Google Pay',
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white))),
                                 ),
                               ),
                             ),
@@ -177,7 +181,9 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 ? 2
                                                 : 1),
                                       ),
-                                      child: Text('Paytm')),
+                                      child: Text('Paytm',
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white))),
                                 ),
                               ),
                             ),
@@ -206,7 +212,9 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 ? 2
                                                 : 1),
                                       ),
-                                      child: Text('PhonePay')),
+                                      child: Text('PhonePay',
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white))),
                                 ),
                               ),
                             ),
@@ -240,7 +248,9 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 ? 2
                                                 : 1),
                                       ),
-                                      child: Text('Paypal ')),
+                                      child: Text('Paypal ',
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white))),
                                 ),
                               ),
                             ),
@@ -269,7 +279,9 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 ? 2
                                                 : 1),
                                       ),
-                                      child: Text('Payoneer')),
+                                      child: Text('Payoneer',
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white))),
                                 ),
                               ),
                             ),
@@ -321,6 +333,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                             onSaved: (val) {
                               payment['mobile_number'] = val.trim();
                             },
+                            style: GoogleFonts.poppins(color: Colors.white),
                             decoration: InputDecoration(
                                 contentPadding: EdgeInsets.symmetric(
                                   vertical: 18,
@@ -328,22 +341,25 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                 prefixIcon: Icon(
                                   FontAwesomeIcons.moneyCheck,
                                   size: 20,
+                                  color: AppColors.buttonColor,
                                 ),
+                                labelStyle:
+                                    GoogleFonts.poppins(color: Colors.white),
                                 labelText: user.userDetails[0].country
                                         .toLowerCase()
                                         .contains('india')
                                     ? 'Enter your ${payment['wallet_name']} mobile no.'
                                     : 'Enter your ${payment['wallet_name']} mail id',
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(4),
                                     borderSide:
                                         BorderSide(color: Colors.white)),
                                 enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(4),
                                     borderSide: BorderSide(
                                         color: Colors.grey, width: 1)),
                                 disabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(4),
                                     borderSide:
                                         BorderSide(color: Colors.white))),
                           ),
@@ -356,12 +372,13 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: GoogleFonts.poppins(
-                                  color: Colors.grey,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.left,
                             ),
                           ),
                           TextFormField(
+                            style: GoogleFonts.poppins(color: Colors.white),
                             keyboardType: TextInputType.number,
                             validator: (val) {
                               val = val.trim();
@@ -383,19 +400,22 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                 prefixIcon: Icon(
                                   FontAwesomeIcons.dollarSign,
                                   size: 20,
+                                  color: AppColors.buttonColor,
                                 ),
+                                labelStyle:
+                                    GoogleFonts.poppins(color: Colors.white),
                                 labelText:
                                     'Withdraw amount more than ${widget.data['minimumWithDrawl']}',
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(4),
                                     borderSide:
                                         BorderSide(color: Colors.white)),
                                 enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(4),
                                     borderSide: BorderSide(
                                         color: Colors.grey, width: 1)),
                                 disabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(4),
                                     borderSide:
                                         BorderSide(color: Colors.white))),
                           ),
@@ -404,12 +424,12 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                               ? CircularProgressIndicator()
                               : Container(
                                   width: buildWidth(context) * 0.75,
-                                  height: buildHeight(context) * 0.08,
+                                  height: 50,
                                   child: RaisedButton(
                                     onPressed: () {
                                       _submit(context);
                                     },
-                                    color: Colors.blue,
+                                    color: AppColors.buttonColor,
                                     elevation: 4,
                                     animationDuration:
                                         Duration(milliseconds: 350),

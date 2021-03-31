@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 import 'package:provider/provider.dart';
+import 'package:winx/config/colors.dart';
 import 'package:winx/functions/widgetFunc.dart';
 import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/auth.dart';
@@ -67,6 +68,7 @@ class _PaymentVerificationState extends State<PaymentVerification> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldkey,
+      backgroundColor: AppColors.mainColor,
       appBar: buildAppBarHome(context, 'Payment Verification'),
       body: SafeArea(
           child: Container(
@@ -75,25 +77,21 @@ class _PaymentVerificationState extends State<PaymentVerification> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                color: Colors.black12,
-                height: buildHeight(context) * 0.25,
-                alignment: Alignment.center,
-                child: Text('Payment Verify Image',
-                    style: GoogleFonts.poppins(fontSize: 28)),
-              ),
               buildSizedBox(buildHeight(context), 0.02),
-              Text('${widget.data['msg']}'),
+              Text(
+                '${widget.data['msg']}',
+                style: GoogleFonts.poppins(color: Colors.white),
+              ),
               buildSizedBox(buildHeight(context), 0.07),
               PinCodeTextField(
                 autofocus: true,
                 controller: controller,
                 highlight: true,
-                highlightColor: Colors.blue,
-                defaultBorderColor: Colors.black,
-                hasTextBorderColor: Colors.green,
+                highlightColor: AppColors.mainColorLight,
+                defaultBorderColor: AppColors.mainColorLight,
+                hasTextBorderColor: AppColors.mainColorLight,
                 isCupertino: true,
-                pinBoxRadius: 20,
+                pinBoxRadius: 4,
                 maxLength: pinLength,
                 hasError: hasError,
                 onTextChanged: (text) {
@@ -108,14 +106,15 @@ class _PaymentVerificationState extends State<PaymentVerification> {
                 wrapAlignment: WrapAlignment.spaceAround,
                 pinBoxDecoration:
                     ProvidedPinBoxDecoration.defaultPinBoxDecoration,
-                pinTextStyle: GoogleFonts.poppins(fontSize: 30.0),
+                pinTextStyle:
+                    GoogleFonts.poppins(fontSize: 30.0, color: Colors.white),
                 pinTextAnimatedSwitcherTransition:
                     ProvidedPinBoxTextAnimation.scalingTransition,
-//                    pinBoxColor: Colors.green[100],
+                pinBoxColor: AppColors.mainColorLight,
                 pinTextAnimatedSwitcherDuration: Duration(milliseconds: 300),
-//                    highlightAnimation: true,
-                highlightAnimationBeginColor: Colors.black,
-                highlightAnimationEndColor: Colors.white12,
+                highlightAnimation: true,
+                highlightAnimationBeginColor: AppColors.mainColorLight,
+                highlightAnimationEndColor: AppColors.mainColorLight,
                 keyboardType: TextInputType.number,
               ),
               buildSizedBox(buildHeight(context), 0.04),
@@ -127,12 +126,12 @@ class _PaymentVerificationState extends State<PaymentVerification> {
                   children: [
                     Container(
                       width: buildWidth(context) * 0.55,
-                      height: buildHeight(context) * 0.08,
+                      height: 50,
                       child: RaisedButton(
                         onPressed: () {
                           _submit(context);
                         },
-                        color: Colors.blue,
+                        color: AppColors.buttonColor,
                         elevation: 4,
                         animationDuration: Duration(milliseconds: 350),
                         shape: RoundedRectangleBorder(
