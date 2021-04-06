@@ -10,7 +10,7 @@ class InfoRaceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var textStyle =
-        GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.bold);
+        GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold);
     return Column(
       children: [
         buildSizedBox(buildHeight(context), 0.02),

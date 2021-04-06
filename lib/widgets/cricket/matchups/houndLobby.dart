@@ -6,8 +6,11 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:winx/config/colors.dart';
 import 'package:winx/functions/cricket/megaleagues/widgetFunctions.dart';
+import 'package:winx/functions/widgetFunc.dart';
+import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/cricketStates.dart';
 import 'package:winx/providers/matchUps.dart';
+import 'package:winx/screens/getCoins.dart';
 import 'package:winx/services/admob_services.dart';
 import 'package:winx/widgets/cricket/matchups/adBanner.dart';
 import 'package:winx/widgets/cricket/matchups/nativeAds.dart';
@@ -136,14 +139,14 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                           // ),
                           Text(
                             "Select  ( min 4 - Max 15) match-up to play",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 10, color: Colors.white),
                           ),
                           Consumer<MatchupsCrickets>(
                             builder: (con, filter, _) {
                               if (filter.getHoundMatchesLocation.isNotEmpty) {
                                 if (states.selectedFilterHound.isEmpty) {
-                                  states.selectedFilterHound = "Filter";
+                                  states.selectedFilterHound = "All";
                                 } else {
                                   states.selectedFilterHound =
                                       states.selectedFilterHound;
@@ -200,7 +203,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                                       title: Text(
                                                         "${filter.houndMatchesLocation[i].locations}",
                                                         style:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.roboto(
                                                                 color: Colors
                                                                     .white),
                                                         textAlign:
@@ -227,7 +230,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                           child: Text(
                                             "${states.selectedFilterHound.isEmpty ? "All" : states.selectedFilterHound}",
                                             textAlign: TextAlign.center,
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 fontSize: 12,
                                                 color: Colors.white),
                                           ),
@@ -265,7 +268,28 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                       height: 15,
                     ),
                     state.houndMatchups.isEmpty
-                        ? noMatchups(context)
+                        ? Column(
+                            children: [
+                              noMatchups(context),
+                              Column(
+                                children: [
+                                  NativeAds(
+                                    nativekey: ams.getNativeAdId(),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                            DownSlideNavigation(
+                                                widget: GetCoinsChips()));
+                                      },
+                                      child: watchNWin())
+                                ],
+                              )
+                            ],
+                          )
                         : Column(
                             children: List.generate(state.houndMatchups.length,
                                 (index) {
@@ -290,7 +314,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                               }
                               return Column(
                                 children: <Widget>[
-                                  state.houndMatchups.length <= 3
+                                  state.houndMatchups.length == index - 1
                                       ? NativeAds(
                                           nativekey: ams.getNativeAdId(),
                                         )
@@ -303,7 +327,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                         children: <Widget>[
                                           Text(
                                             "${state.houndMatchups[index].raceName}",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 color: Colors.white),
                                           ),
                                           // buildSizedBoxWidth(buildWidth(context), 0.05),
@@ -317,7 +341,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                                     BorderRadius.circular(10)),
                                             child: Text(
                                               "$remaining $time",
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.roboto(
                                                 fontSize: 13,
                                                 fontWeight: FontWeight.w500,
                                                 color: Colors.black,
@@ -366,26 +390,17 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                               }
                                               return Column(
                                                 children: [
-                                                  i != 0 && i % 3 == 0
-                                                      ? Container(
-                                                          height: 75,
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              double.infinity,
-                                                          color: Colors.black,
-                                                          padding: EdgeInsets
-                                                              .symmetric(
-                                                                  horizontal:
-                                                                      10,
-                                                                  vertical: 10),
-                                                          child: AdBanner(
-                                                            stringKey: ams
-                                                                .getBannerAppId(),
-                                                            size:
-                                                                AdmobBannerSize
-                                                                    .BANNER,
-                                                          ))
+                                                  i ==
+                                                          state
+                                                                  .houndMatchups[
+                                                                      index]
+                                                                  .matchups
+                                                                  .length -
+                                                              1
+                                                      ? NativeAds(
+                                                          nativekey: ams
+                                                              .getNativeAdId(),
+                                                        )
                                                       : Container(),
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -454,6 +469,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                                                       .trainer,
                                                                   isRight:
                                                                       false,
+                                                                  isHound: true,
                                                                 )),
                                                           ),
                                                           SizedBox(
@@ -491,7 +507,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                                                   )
                                                                 : Text(
                                                                     "VS",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.roboto(
                                                                         fontSize:
                                                                             12,
                                                                         color: Colors
@@ -549,6 +565,7 @@ class _HoundMatchUpLobbyState extends State<HoundMatchUpLobby> {
                                                                   trainer: matchup2
                                                                       .trainer,
                                                                   isRight: true,
+                                                                  isHound: true,
                                                                 )),
                                                           ),
                                                         ],

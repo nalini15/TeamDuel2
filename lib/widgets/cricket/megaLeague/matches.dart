@@ -22,11 +22,11 @@ class MatchesLeagueInfo extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "12 Matches left",
-                  style: GoogleFonts.poppins(fontSize: 12),
+                  style: GoogleFonts.roboto(fontSize: 12),
                 ),
                 Text(
                   "28 Matches",
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontSize: 10, color: const Color(0xffbb777777)),
                 )
               ],
@@ -45,7 +45,7 @@ class MatchesLeagueInfo extends StatelessWidget {
             Text(
               "Live",
               textAlign: TextAlign.left,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   color: const Color(0xffbb777777), fontSize: 12),
             ),
             buildSizedBox(buildHeight(context), 0.02),
@@ -60,7 +60,7 @@ class MatchesLeagueInfo extends StatelessWidget {
             Text(
               "Upcoming",
               textAlign: TextAlign.left,
-              style: GoogleFonts.poppins(color: const Color(0xffbb777777)),
+              style: GoogleFonts.roboto(color: const Color(0xffbb777777)),
             ),
             buildSizedBox(buildHeight(context), 0.02),
             Column(

@@ -7,8 +7,10 @@ import 'package:provider/provider.dart';
 import 'package:winx/config/colors.dart';
 import 'package:winx/functions/cricket/megaleagues/widgetFunctions.dart';
 import 'package:winx/functions/widgetFunc.dart';
+import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/cricketStates.dart';
 import 'package:winx/providers/matchUps.dart';
+import 'package:winx/screens/getCoins.dart';
 import 'package:winx/services/admob_services.dart';
 import 'package:winx/widgets/cricket/matchups/adBanner.dart';
 import 'package:winx/widgets/cricket/matchups/nativeAds.dart';
@@ -115,13 +117,13 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                         children: <Widget>[
                           Text(
                             "Select  ( min 4 - Max 15) match-up to play",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 10, color: Colors.white),
                           ),
                           Consumer<MatchupsCrickets>(builder: (con, filter, _) {
                             if (filter.getCricketMatchesData.isNotEmpty) {
                               if (states.selectedFilterCricket.isEmpty) {
-                                states.selectedFilterCricket = "Filter";
+                                states.selectedFilterCricket = "All";
                               } else {
                                 states.selectedFilterCricket =
                                     states.selectedFilterCricket;
@@ -170,10 +172,8 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                                                     },
                                                     title: Text(
                                                       "${filter.getCricketMatchesData[i].seriesName}",
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              color:
-                                                                  Colors.white),
+                                                      style: GoogleFonts.roboto(
+                                                          color: Colors.white),
                                                       textAlign:
                                                           TextAlign.center,
                                                     ),
@@ -200,7 +200,7 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                                           "${states.selectedFilterCricket.isEmpty ? "All" : states.selectedFilterCricket}",
                                           textAlign: TextAlign.center,
                                           overflow: TextOverflow.ellipsis,
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                             fontSize: 12,
                                             color: Colors.white,
                                           ),
@@ -242,7 +242,28 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                       height: 15,
                     ),
                     state.cricketMatchups.isEmpty
-                        ? noMatchups(context)
+                        ? Column(
+                            children: [
+                              noMatchups(context),
+                              Column(
+                                children: [
+                                  NativeAds(
+                                    nativekey: ams.getNativeAdId(),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                            DownSlideNavigation(
+                                                widget: GetCoinsChips()));
+                                      },
+                                      child: watchNWin())
+                                ],
+                              )
+                            ],
+                          )
                         : Column(
                             children: List.generate(
                                 state.cricketMatchups.length, (index) {
@@ -278,9 +299,24 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
 
                               return Column(
                                 children: [
-                                  state.cricketMatchups.length <= 3
-                                      ? NativeAds(
-                                          nativekey: ams.getNativeAdId(),
+                                  state.cricketMatchups.length == index - 1
+                                      ? Column(
+                                          children: [
+                                            NativeAds(
+                                              nativekey: ams.getNativeAdId(),
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            GestureDetector(
+                                                onTap: () {
+                                                  Navigator.of(context).push(
+                                                      DownSlideNavigation(
+                                                          widget:
+                                                              GetCoinsChips()));
+                                                },
+                                                child: watchNWin())
+                                          ],
                                         )
                                       : Container(),
                                   Container(
@@ -293,7 +329,7 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                                               child: Text(
                                                 "${state.cricketMatchups[index].matchTeamOne} VS ${state.cricketMatchups[index].matchTeamTwo}",
                                                 overflow: TextOverflow.ellipsis,
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     color: Colors.white),
                                               ),
                                             ),
@@ -310,7 +346,7 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                                                 "$remaining $time",
                                                 maxLines: 1,
                                                 overflow: TextOverflow.ellipsis,
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 13,
                                                     fontWeight: FontWeight.w500,
                                                     color: Colors.black),
@@ -359,26 +395,34 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
 
                                               return Column(
                                                 children: [
-                                                  i != 0 && i % 3 == 0
-                                                      ? Container(
-                                                          height: 75,
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              double.infinity,
-                                                          color: Colors.black,
-                                                          padding: EdgeInsets
-                                                              .symmetric(
-                                                                  horizontal:
-                                                                      10,
-                                                                  vertical: 10),
-                                                          child: AdBanner(
-                                                            stringKey: ams
-                                                                .getBannerAppId(),
-                                                            size:
-                                                                AdmobBannerSize
-                                                                    .BANNER,
-                                                          ))
+                                                  i ==
+                                                          state
+                                                                  .cricketMatchups[
+                                                                      index]
+                                                                  .matchups
+                                                                  .length -
+                                                              1
+                                                      ? Column(
+                                                          children: [
+                                                            NativeAds(
+                                                              nativekey: ams
+                                                                  .getNativeAdId(),
+                                                            ),
+                                                            SizedBox(
+                                                              height: 20,
+                                                            ),
+                                                            GestureDetector(
+                                                                onTap: () {
+                                                                  Navigator.of(
+                                                                          context)
+                                                                      .push(DownSlideNavigation(
+                                                                          widget:
+                                                                              GetCoinsChips()));
+                                                                },
+                                                                child:
+                                                                    watchNWin())
+                                                          ],
+                                                        )
                                                       : Container(),
                                                   Container(
                                                     // color: AppColors.mainColorLight,
@@ -485,7 +529,7 @@ class _MatchUpLobbyState extends State<MatchUpLobby> {
                                                                   )
                                                                 : Text(
                                                                     "VS",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.roboto(
                                                                         fontSize:
                                                                             12,
                                                                         color: Colors

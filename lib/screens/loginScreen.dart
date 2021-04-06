@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
       content: Text(
         stringList,
         textAlign: TextAlign.center,
-        style: GoogleFonts.poppins(
+        style: GoogleFonts.roboto(
             fontSize: 13.0, fontWeight: FontWeight.bold, color: Colors.red),
       ),
       duration: Duration(seconds: 3),
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         TextFormField(
                           autocorrect: true,
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.roboto(color: Colors.white),
                           keyboardType: TextInputType.text,
                           cursorColor: Colors.white,
                           cursorRadius: Radius.circular(10),
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: Colors.white,
                             ),
                             hintText: 'Email / Mobile No.',
-                            hintStyle: GoogleFonts.poppins(
+                            hintStyle: GoogleFonts.roboto(
                                 color: Colors.white, fontSize: 12),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(0),
@@ -156,13 +156,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         buildSizedBox(height, 0.03),
                         TextFormField(
                           obscureText: _password,
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.roboto(color: Colors.white),
                           keyboardType: TextInputType.text,
                           cursorColor: Colors.white,
                           cursorRadius: Radius.circular(10),
                           decoration: InputDecoration(
                             hintText: 'Password',
-                            hintStyle: GoogleFonts.poppins(
+                            hintStyle: GoogleFonts.roboto(
                                 color: Colors.white, fontSize: 12),
                             fillColor: AppColors.mainColorLight,
                             filled: true,
@@ -210,7 +210,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               'Forgot Password ?',
                               textAlign: TextAlign.right,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.bold,
                                   color: Color.fromRGBO(16, 119, 194, 1)),
                             ),
@@ -234,7 +234,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       borderRadius: BorderRadius.circular(0)),
                                   child: Text(
                                     'Log In',
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: Colors.white, fontSize: 18),
                                   ),
                                 ),
@@ -244,7 +244,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Text(
                           'Or connect using',
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.roboto(color: Colors.white),
                         ),
                         buildSizedBox(height, 0.01),
                         SocialLogin(),
@@ -253,13 +253,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             text: TextSpan(children: [
                           TextSpan(
                               text: "Don't have an account? ",
-                              style: GoogleFonts.poppins(color: Colors.white)),
+                              style: GoogleFonts.roboto(color: Colors.white)),
                           TextSpan(
                               text: "Signup",
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () => Navigator.push(
                                     context, FadeNavigation(widget: SingUp())),
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Color.fromRGBO(16, 119, 194, 1),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16))

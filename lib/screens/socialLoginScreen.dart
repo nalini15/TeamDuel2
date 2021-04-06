@@ -65,7 +65,7 @@ class _SocialLoginState extends State<SocialLogin> {
                             child: Text(
                               stringList.toString(),
                               textAlign: TextAlign.center,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Colors.red, fontSize: 18),
                             ),
                           )
@@ -124,7 +124,7 @@ class _SocialLoginState extends State<SocialLogin> {
                             child: Text(
                               stringList,
                               textAlign: TextAlign.center,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Colors.red, fontSize: 15),
                             ),
                           )

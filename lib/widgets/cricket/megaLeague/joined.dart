@@ -55,7 +55,7 @@ class Joint extends StatelessWidget {
                     child: OutlineButton(
                   child: Text(
                     "League Info",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontSize: 14, color: AppColors.mainColor),
                   ),
                   shape: RoundedRectangleBorder(
@@ -97,7 +97,7 @@ class Joint extends StatelessWidget {
                         child: Text(
                           'JOIN MATCHES',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
                               fontSize: 11,
                               color: Colors.white),

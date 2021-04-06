@@ -91,7 +91,7 @@ class _ForgotPasswordDialogState extends State<ForgotPasswordDialog> {
                       ),
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
-                        style: GoogleFonts.poppins(color: Colors.white),
+                        style: GoogleFonts.roboto(color: Colors.white),
                         cursorColor: Colors.white,
                         decoration: InputDecoration(
                             hintText: 'Email-id / Mobile No.',
@@ -99,7 +99,7 @@ class _ForgotPasswordDialogState extends State<ForgotPasswordDialog> {
                                 color: Colors.white),
                             fillColor: AppColors.mainColorLight,
                             filled: true,
-                            hintStyle: GoogleFonts.poppins(
+                            hintStyle: GoogleFonts.roboto(
                                 color: Colors.white, fontSize: 12),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(0),
@@ -131,7 +131,7 @@ class _ForgotPasswordDialogState extends State<ForgotPasswordDialog> {
                       error
                           ? Text(
                               'Username is not registered with us',
-                              style: GoogleFonts.poppins(color: Colors.red),
+                              style: GoogleFonts.roboto(color: Colors.red),
                             )
                           : Container(),
                       SizedBox(height: 15.0),
@@ -153,7 +153,7 @@ class _ForgotPasswordDialogState extends State<ForgotPasswordDialog> {
                                         : Text(
                                             'Verify',
                                             maxLines: 1,
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                               fontSize: 18,
                                               color: Colors.white,
                                             ),

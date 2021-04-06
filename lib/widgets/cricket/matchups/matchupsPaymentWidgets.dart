@@ -31,7 +31,7 @@ class _MatchUpsPaymentState extends State<MatchUpsPayment> {
                   children: <Widget>[
                     // Text(
                     //   "I bet",
-                    //   style: GoogleFonts.poppins(fontSize: 12),
+                    //   style: GoogleFonts.roboto(fontSize: 12),
                     // ),
                     SizedBox(
                       width: 20,
@@ -55,8 +55,7 @@ class _MatchUpsPaymentState extends State<MatchUpsPayment> {
                         child: Text(
                           "-",
                           textAlign: TextAlign.center,
-                          style:
-                              GoogleFonts.poppins(color: AppColors.mainColor),
+                          style: GoogleFonts.roboto(color: AppColors.mainColor),
                         ),
                       ),
                     ),
@@ -71,7 +70,7 @@ class _MatchUpsPaymentState extends State<MatchUpsPayment> {
                       width: 5,
                     ),
                     Text("${states.invest}",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontSize: 12, fontWeight: FontWeight.bold)),
                     SizedBox(
                       width: 8,
@@ -95,8 +94,7 @@ class _MatchUpsPaymentState extends State<MatchUpsPayment> {
                         child: Text(
                           "+",
                           textAlign: TextAlign.center,
-                          style:
-                              GoogleFonts.poppins(color: AppColors.mainColor),
+                          style: GoogleFonts.roboto(color: AppColors.mainColor),
                         ),
                       ),
                     ),
@@ -134,7 +132,7 @@ class _MatchUpsPaymentState extends State<MatchUpsPayment> {
                         states.investType == InvestType.coins
                             ? "Coins"
                             : "Chips",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                           fontSize: 15,
                         ),
                       ),

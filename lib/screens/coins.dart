@@ -107,7 +107,7 @@ class _MyCoinsState extends State<MyCoins> {
                     collapseMode: CollapseMode.parallax,
                     centerTitle: true,
                     title: Text("My Coins",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                           color: Colors.white,
                           fontSize: 16.0,
                         )),
@@ -124,7 +124,7 @@ class _MyCoinsState extends State<MyCoins> {
                           Text('COINS IMAGE'),
                           buildSizedBox(buildHeight(context), 0.05),
                           Text('Balance',
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Colors.grey,
                                   fontSize: 20,
                                   fontWeight: FontWeight.w300)),
@@ -136,7 +136,7 @@ class _MyCoinsState extends State<MyCoins> {
                                     : Coins.total.isEmpty
                                         ? '0'
                                         : Coins.total,
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white,
                                     fontSize: 28,
                                     fontWeight: FontWeight.bold)),
@@ -159,21 +159,21 @@ class _MyCoinsState extends State<MyCoins> {
                     children: [
                       Text(
                         'Date',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                             color: Colors.white),
                       ),
                       Text(
                         'Type',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                             color: Colors.white),
                       ),
                       Text(
                         'Amount',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                             color: Colors.white),
@@ -197,7 +197,7 @@ class _MyCoinsState extends State<MyCoins> {
                                       ? Center(
                                           child: Text(
                                             'No Coins Available',
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 color: Colors.white),
                                           ),
                                         )
@@ -250,8 +250,7 @@ class _MyCoinsState extends State<MyCoins> {
                                                       maxLines: 1,
                                                       overflow:
                                                           TextOverflow.ellipsis,
-                                                      style:
-                                                          GoogleFonts.poppins(
+                                                      style: GoogleFonts.roboto(
                                                         color: Colors.white,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -261,7 +260,7 @@ class _MyCoinsState extends State<MyCoins> {
                                                     DateTime.parse(user
                                                         .getCoins[i]
                                                         .createdAt)),
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -274,7 +273,7 @@ class _MyCoinsState extends State<MyCoins> {
                                                   child: Text(
                                                     'Description:',
                                                     textAlign: TextAlign.left,
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.roboto(
                                                         color: Colors.white,
                                                         fontWeight:
                                                             FontWeight.bold,
@@ -288,14 +287,11 @@ class _MyCoinsState extends State<MyCoins> {
                                                             vertical: 5),
                                                     child: Text(
                                                       user.getCoins[i].message,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                              fontSize: 14),
+                                                      style: GoogleFonts.roboto(
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 14),
                                                     ))
                                               ],
                                             ),

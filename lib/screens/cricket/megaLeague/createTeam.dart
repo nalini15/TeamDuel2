@@ -20,10 +20,10 @@ class CreateTeam extends StatelessWidget {
             children: <Widget>[
               Text(
                 "IND vs AUS",
-                style: GoogleFonts.poppins(fontSize: 14),
+                style: GoogleFonts.roboto(fontSize: 14),
               ),
               Text("STARTS IN 03H : 12M : 56s",
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontSize: 12, fontWeight: FontWeight.w300))
             ],
           ),
@@ -37,7 +37,7 @@ class CreateTeam extends StatelessWidget {
           children: <Widget>[
             Text(
               "You have not created any team yet",
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 14, color: const Color(0xffbb808080)),
             ),
             SizedBox(
@@ -74,7 +74,7 @@ class CreateTeam extends StatelessWidget {
                     child: Text(
                       'Create Team',
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                           color: Colors.white),

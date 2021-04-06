@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:winx/config/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,7 @@ AppBar buildAppBar(BuildContext context, title) {
     centerTitle: true,
     title: Text(
       '$title',
-      style: GoogleFonts.poppins(color: Colors.white),
+      style: GoogleFonts.roboto(color: Colors.white),
     ),
     backgroundColor: Colors.transparent,
     leading: IconButton(
@@ -136,3 +137,46 @@ var boxDecoration = BoxDecoration(
     color: Colors.grey[200],
     border: Border.all(color: Colors.grey, width: 1),
     borderRadius: BorderRadius.circular(20));
+
+Container watchNWin() {
+  return Container(
+    height: 75,
+    child: Card(
+        margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          child: Row(
+            children: [
+              Image.asset(
+                "assets/images/videoAd.png",
+                width: 30,
+              ),
+              SizedBox(
+                width: 16,
+              ),
+              Text(
+                "Watch An AD And Earn Coins",
+                style: GoogleFonts.roboto(color: Colors.white),
+              ),
+              SizedBox(
+                width: 3,
+              ),
+              Image.asset(
+                "assets/images/toppngBig.png",
+                width: 20,
+              ),
+              Spacer(),
+              Icon(
+                FontAwesomeIcons.chevronRight,
+                color: Colors.white,
+              )
+            ],
+          ),
+        ),
+        color: AppColors.mainColorLight,
+        elevation: 8,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+        )),
+  );
+}

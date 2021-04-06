@@ -14,7 +14,7 @@ class Countdown extends AnimatedWidget {
 
     return Text(
       "$timerText",
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.roboto(
         fontSize: 18,
         color: Theme.of(context).primaryColor,
       ),

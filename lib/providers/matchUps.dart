@@ -158,13 +158,13 @@ class MatchupsCrickets extends ChangeNotifier {
       if (response['data'].isEmpty) {
         if (selectedIndex == 2) {
           cricketMatchups.clear();
-          cricketMatches.clear();
+          // cricketMatches.clear();
         } else if (selectedIndex == 1) {
           horseMatchups.clear();
-          horseMatchesLocation.clear();
+          // horseMatchesLocation.clear();
         } else {
           houndMatchups.clear();
-          houndMatchesLocation.clear();
+          // houndMatchesLocation.clear();
         }
         notifyListeners();
 

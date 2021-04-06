@@ -30,7 +30,7 @@ class _MatchesState extends State<Matches> {
           child: Text(
             'Upcoming Races:',
             style:
-                GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.bold),
+                GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold),
           ),
         ),
         buildSizedBox(buildHeight(context), 0.04),
@@ -64,7 +64,7 @@ class _MatchesState extends State<Matches> {
                                       Text(
                                         'Track Meet : ${items.matchTitle}',
                                         textAlign: TextAlign.left,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Spacer(),
@@ -97,7 +97,7 @@ class _MatchesState extends State<Matches> {
                                             children: <Widget>[
                                               Text(
                                                 '${items.matchDestination}',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 14,
                                                     fontWeight:
                                                         FontWeight.w400),
@@ -110,7 +110,7 @@ class _MatchesState extends State<Matches> {
                                                 children: [
                                                   Text(
                                                     'Ends In: ',
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.roboto(
                                                         color: Colors.red,
                                                         fontSize: 15,
                                                         fontWeight:
@@ -131,7 +131,7 @@ class _MatchesState extends State<Matches> {
                                                   //   defaultMin: "**",
                                                   //   defaultSec: "**",
                                                   //   textStyle:
-                                                  //       GoogleFonts.poppins(
+                                                  //       GoogleFonts.roboto(
                                                   //           color: Colors.red,
                                                   //           fontSize: 15),
                                                   // )
@@ -165,7 +165,7 @@ class _MatchesState extends State<Matches> {
                                                   buildWidth(context), 0.02),
                                               Text(
                                                 '${items.userJoinedTicket}/ ${items.userAllowedTicket}',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),

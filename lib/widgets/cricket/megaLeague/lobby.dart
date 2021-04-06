@@ -64,7 +64,7 @@ class _LobbyState extends State<Lobby> {
                             Text(
                               "VS",
                               textAlign: TextAlign.start,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xffbb333333)),
@@ -87,7 +87,7 @@ class _LobbyState extends State<Lobby> {
                           color: Colors.white,
                           child: Text(
                             "PLAY NOW",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 11, color: AppColors.mainColor),
                           ),
                           shape: RoundedRectangleBorder(
@@ -135,13 +135,13 @@ class _LobbyState extends State<Lobby> {
                                           children: <Widget>[
                                             Text(
                                               "Refer a friend & EARN",
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.roboto(
                                                   fontSize: 11,
                                                   fontWeight: FontWeight.w400),
                                             ),
                                             Text(
                                               "50 coins",
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.roboto(
                                                   fontSize: 12,
                                                   fontWeight: FontWeight.w500,
                                                   color: const Color(
@@ -180,7 +180,7 @@ class _LobbyState extends State<Lobby> {
                                       Expanded(
                                         child: Text(
                                           "EARN MORE COINS",
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -243,7 +243,7 @@ class _LobbyState extends State<Lobby> {
                             child: OutlineButton(
                           child: Text(
                             "League Info",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 12, color: AppColors.mainColor),
                           ),
                           shape: RoundedRectangleBorder(
@@ -286,7 +286,7 @@ class _LobbyState extends State<Lobby> {
                                 child: Text(
                                   'JOIN FREE',
                                   textAlign: TextAlign.center,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12,
                                       color: Colors.white),

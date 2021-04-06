@@ -80,7 +80,7 @@ class _PaymentVerificationState extends State<PaymentVerification> {
               buildSizedBox(buildHeight(context), 0.02),
               Text(
                 '${widget.data['msg']}',
-                style: GoogleFonts.poppins(color: Colors.white),
+                style: GoogleFonts.roboto(color: Colors.white),
               ),
               buildSizedBox(buildHeight(context), 0.07),
               PinCodeTextField(
@@ -107,7 +107,7 @@ class _PaymentVerificationState extends State<PaymentVerification> {
                 pinBoxDecoration:
                     ProvidedPinBoxDecoration.defaultPinBoxDecoration,
                 pinTextStyle:
-                    GoogleFonts.poppins(fontSize: 30.0, color: Colors.white),
+                    GoogleFonts.roboto(fontSize: 30.0, color: Colors.white),
                 pinTextAnimatedSwitcherTransition:
                     ProvidedPinBoxTextAnimation.scalingTransition,
                 pinBoxColor: AppColors.mainColorLight,
@@ -142,7 +142,7 @@ class _PaymentVerificationState extends State<PaymentVerification> {
                               )
                             : Text(
                                 'Verify',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 18),
                               ),
                       ),
@@ -158,7 +158,7 @@ class _PaymentVerificationState extends State<PaymentVerification> {
                 },
                 child: Text(resendLoading ? 'Loading...' : 'Resend OTP',
                     style:
-                        GoogleFonts.poppins(color: Colors.grey, fontSize: 18)),
+                        GoogleFonts.roboto(color: Colors.grey, fontSize: 18)),
               )
             ],
           ),

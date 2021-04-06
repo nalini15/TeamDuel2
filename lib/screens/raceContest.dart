@@ -42,7 +42,7 @@ class _RaceContestState extends State<RaceContest> {
                               Text(
                                 'Race No. 1/25',
                                 textAlign: TextAlign.left,
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
@@ -64,7 +64,7 @@ class _RaceContestState extends State<RaceContest> {
                               buildSizedBoxWidth(buildWidth(context), 0.01),
                               Text(
                                 'India - Hyderabad Race',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontSize: 19, fontWeight: FontWeight.w400),
                               ),
                             ],
@@ -75,7 +75,7 @@ class _RaceContestState extends State<RaceContest> {
                             children: [
                               Text(
                                 'Ends In: ',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.red,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold),
@@ -91,7 +91,7 @@ class _RaceContestState extends State<RaceContest> {
                               //   defaultHours: "**",
                               //   defaultMin: "**",
                               //   defaultSec: "**",
-                              //   textStyle: GoogleFonts.poppins(
+                              //   textStyle: GoogleFonts.roboto(
                               //       color: Colors.red, fontSize: 15),
                               // )
                             ],

@@ -91,7 +91,7 @@ class _ProfileState extends State<Profile> {
                             width: double.infinity,
                             alignment: Alignment.topLeft,
                             child: Text('Personal Information',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Color.fromRGBO(186, 196, 208, 0.91),
@@ -111,7 +111,7 @@ class _ProfileState extends State<Profile> {
                                 // TextFormField(
                                 //     readOnly: true,
                                 //     initialValue: user.userDetails[0].email,
-                                //     style: GoogleFonts.poppins(
+                                //     style: GoogleFonts.roboto(
                                 //         color: Colors.white),
                                 //     decoration: InputDecoration(
                                 //       fillColor: AppColors.mainColorLight,
@@ -136,7 +136,7 @@ class _ProfileState extends State<Profile> {
                                 // TextFormField(
                                 //   readOnly: true,
                                 //   style:
-                                //       GoogleFonts.poppins(color: Colors.white),
+                                //       GoogleFonts.roboto(color: Colors.white),
                                 //   initialValue:
                                 //       user.userDetails[0].dob == 'null'
                                 //           ? ''
@@ -267,7 +267,7 @@ class _ProfileState extends State<Profile> {
                                     "Country", user.userDetails[0].country),
                                 // TextFormField(
                                 //   style:
-                                //       GoogleFonts.poppins(color: Colors.white),
+                                //       GoogleFonts.roboto(color: Colors.white),
                                 //   readOnly: true,
                                 //   initialValue: user.userDetails[0].country,
                                 //   decoration: InputDecoration(
@@ -290,7 +290,7 @@ class _ProfileState extends State<Profile> {
                                 // TextFormField(
                                 //   readOnly: true,
                                 //   style:
-                                //       GoogleFonts.poppins(color: Colors.white),
+                                //       GoogleFonts.roboto(color: Colors.white),
                                 //   initialValue: user.userDetails[0].state,
                                 //   decoration: InputDecoration(
                                 //     fillColor: AppColors.mainColorLight,
@@ -311,7 +311,7 @@ class _ProfileState extends State<Profile> {
                                   width: double.infinity,
                                   alignment: Alignment.topLeft,
                                   child: Text('Account Setting',
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color:
@@ -336,7 +336,7 @@ class _ProfileState extends State<Profile> {
                                     padding: EdgeInsets.only(left: 10),
                                     child: Text(
                                       "Change Password",
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           color: Colors.white),
                                       textAlign: TextAlign.left,
                                     ),
@@ -375,7 +375,7 @@ class _ProfileState extends State<Profile> {
                             child: Text(
                               "Edit Account",
                               textAlign: TextAlign.center,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white),
@@ -406,11 +406,11 @@ class _ProfileState extends State<Profile> {
           Text(
             "$key",
             style:
-                GoogleFonts.poppins(fontSize: 10, color: AppColors.labelColor),
+                GoogleFonts.roboto(fontSize: 10, color: AppColors.labelColor),
           ),
           Text(
             "$value",
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.roboto(
                 fontSize: 12, color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ],

@@ -39,7 +39,7 @@ class _EmailVerifyState extends State<EmailVerify> {
       content: Text(
         stringList,
         textAlign: TextAlign.center,
-        style: GoogleFonts.poppins(
+        style: GoogleFonts.roboto(
             fontSize: 13.0, fontWeight: FontWeight.bold, color: Colors.white),
       ),
       duration: Duration(seconds: 2),
@@ -108,7 +108,7 @@ class _EmailVerifyState extends State<EmailVerify> {
                 width: double.infinity,
                 child: Text(
                   'Enter the OTP sent on ${widget.userEmail}',
-                  style: GoogleFonts.poppins(color: Colors.grey, fontSize: 20),
+                  style: GoogleFonts.roboto(color: Colors.grey, fontSize: 20),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -137,7 +137,7 @@ class _EmailVerifyState extends State<EmailVerify> {
                 pinBoxDecoration:
                     ProvidedPinBoxDecoration.defaultPinBoxDecoration,
                 pinTextStyle:
-                    GoogleFonts.poppins(fontSize: 30.0, color: Colors.white),
+                    GoogleFonts.roboto(fontSize: 30.0, color: Colors.white),
                 pinTextAnimatedSwitcherTransition:
                     ProvidedPinBoxTextAnimation.scalingTransition,
                 pinBoxColor: AppColors.mainColorLight,
@@ -172,7 +172,7 @@ class _EmailVerifyState extends State<EmailVerify> {
                               )
                             : Text(
                                 'Verify',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 18),
                               ),
                       ),
@@ -187,7 +187,7 @@ class _EmailVerifyState extends State<EmailVerify> {
                 },
                 child: Text('Resend OTP',
                     style:
-                        GoogleFonts.poppins(color: Colors.grey, fontSize: 18)),
+                        GoogleFonts.roboto(color: Colors.grey, fontSize: 18)),
               )
             ],
           ),

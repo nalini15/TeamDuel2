@@ -72,12 +72,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Tab(
                 child: Text(
               "Cricket",
-              style: GoogleFonts.poppins(),
+              style: GoogleFonts.roboto(),
             )),
             Tab(
               child: Text(
                 "Horse Racing",
-                style: GoogleFonts.poppins(),
+                style: GoogleFonts.roboto(),
               ),
             ),
           ],
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Text(
                   Coins.total == null ? '0' : Coins.total,
                   overflow: TextOverflow.ellipsis,
-                  style: GoogleFonts.poppins(color: Colors.black, fontSize: 12),
+                  style: GoogleFonts.roboto(color: Colors.black, fontSize: 12),
                 ),
               ],
             ),
@@ -133,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             children: <Widget>[
               Text(
                 "Mega Leagues",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     fontWeight: FontWeight.bold, fontSize: 15),
               ),
               SizedBox(

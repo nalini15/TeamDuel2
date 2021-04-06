@@ -24,8 +24,8 @@ class _UserAllTicketInfoState extends State<UserAllTicketInfo> {
             margin: EdgeInsets.all(20),
             child: Text(
               'India - Hyderabad Races',
-              style: GoogleFonts.poppins(
-                  fontSize: 18, fontWeight: FontWeight.bold),
+              style:
+                  GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           Expanded(
@@ -43,7 +43,7 @@ class _UserAllTicketInfoState extends State<UserAllTicketInfo> {
                   children: <Widget>[
                     buildSizedBoxWidth(buildWidth(context), 0.02),
                     Text('Ticket_$i',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontSize: 15, fontWeight: FontWeight.bold)),
                     buildSizedBoxWidth(buildWidth(context), 0.03),
                     i == 0

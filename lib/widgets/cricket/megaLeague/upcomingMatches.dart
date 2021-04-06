@@ -52,19 +52,19 @@ class _UpcomingMatchesState extends State<UpcomingMatches> {
                                 children: <Widget>[
                                   Text(
                                     "Match 2$i",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontSize: 11,
                                         color: const Color(0xffbb777777)),
                                   ),
                                   Text(
                                     "03h : 12m : 56s",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontSize: 11,
                                         color: const Color(0xffbbFF4956)),
                                   ),
                                   Text(
                                     "Playing XI Announced",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontSize: 11,
                                         color: AppColors.greenColor),
                                   ),
@@ -84,7 +84,7 @@ class _UpcomingMatchesState extends State<UpcomingMatches> {
                                       ),
                                       Text(
                                         "KXIP",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 11,
                                             color: const Color(0xffbb333333)),
                                       )
@@ -96,7 +96,7 @@ class _UpcomingMatchesState extends State<UpcomingMatches> {
                                   Text(
                                     "VS",
                                     textAlign: TextAlign.start,
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontSize: 12,
                                         color: const Color(0xffbb333333)),
                                   ),
@@ -114,7 +114,7 @@ class _UpcomingMatchesState extends State<UpcomingMatches> {
                                       ),
                                       Text(
                                         "KXIP",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 11,
                                             color: const Color(0xffbb333333)),
                                       )
@@ -157,7 +157,7 @@ class _UpcomingMatchesState extends State<UpcomingMatches> {
                                   child: OutlineButton(
                                 child: Text(
                                   "My Teams ($i)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontSize: 12, color: AppColors.mainColor),
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -206,7 +206,7 @@ class _UpcomingMatchesState extends State<UpcomingMatches> {
                                       child: Text(
                                         'JOIN 1ST TEAM FREE',
                                         textAlign: TextAlign.center,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 11,
                                             color: Colors.white),

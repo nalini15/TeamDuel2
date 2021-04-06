@@ -54,7 +54,7 @@ class CricketGrandLeague extends StatelessWidget {
                                       Text(
                                         ' INDIA ',
                                         textAlign: TextAlign.justify,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 22,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -78,7 +78,7 @@ class CricketGrandLeague extends StatelessWidget {
                                           buildWidth(context), 0.01),
                                       Text(
                                         'Hyderabad Race',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 19,
                                             fontWeight: FontWeight.w400),
                                       ),
@@ -90,7 +90,7 @@ class CricketGrandLeague extends StatelessWidget {
                                     slideDirection: SlideDirection.Up,
                                     separator: ":",
                                     tightLabel: true,
-                                    textStyle: GoogleFonts.poppins(
+                                    textStyle: GoogleFonts.roboto(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w300,
                                     ),
@@ -101,7 +101,7 @@ class CricketGrandLeague extends StatelessWidget {
                                   ),
                                   Text(
                                     'dd   :   hh   :   mm   :   ss',
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontSize: 12, color: Colors.grey),
                                   )
                                 ],
@@ -122,7 +122,7 @@ class CricketGrandLeague extends StatelessWidget {
                         ),
                         buildSizedBoxWidth(buildWidth(context), 0.05),
                         Text('Updates will be displayed here....',
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                               fontWeight: FontWeight.w400,
                               color: Colors.grey,
                             )),

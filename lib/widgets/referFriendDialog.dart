@@ -34,7 +34,7 @@ class _CustomDialogState extends State<CustomDialog> {
       content: Text(
         stringList,
         textAlign: TextAlign.center,
-        style: GoogleFonts.poppins(
+        style: GoogleFonts.roboto(
             fontSize: 13.0, fontWeight: FontWeight.bold, color: Colors.red),
       ),
       duration: Duration(seconds: 2),
@@ -105,7 +105,7 @@ class _CustomDialogState extends State<CustomDialog> {
               children: <Widget>[
                 Text(
                   widget.title,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                     fontSize: 24.0,
                     fontWeight: FontWeight.w700,
                   ),
@@ -156,7 +156,7 @@ class _CustomDialogState extends State<CustomDialog> {
                     child: ListTile(
                       title: Text(
                         'Whats App Share',
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                        style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                       ),
                       trailing:
                           Icon(FontAwesomeIcons.whatsapp, color: Colors.green),
@@ -168,7 +168,7 @@ class _CustomDialogState extends State<CustomDialog> {
                     opacity: error.isEmpty ? 0 : 1,
                     child: Text(
                       error.isEmpty ? '' : error,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           color: error == 'Refer Code sent to your friend'
                               ? Colors.green
                               : Colors.red,

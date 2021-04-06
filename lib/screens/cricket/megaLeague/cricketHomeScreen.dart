@@ -44,7 +44,9 @@ class _CricketHomeScreenState extends State<CricketHomeScreen> {
         buildSizedBox(buildHeight(context), 0.02),
         states.section == Sections.lobby
             ? Lobby()
-            : states.section == Sections.joined ? Joint() : Completed()
+            : states.section == Sections.joined
+                ? Joint()
+                : Completed()
       ],
     );
   }
@@ -67,7 +69,7 @@ class _CricketHomeScreenState extends State<CricketHomeScreen> {
             child: Text(
               "$title",
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 12,
                   color: isActive ? AppColors.mainColor : Colors.grey),
             ),

@@ -30,7 +30,7 @@ class PrizePool extends StatelessWidget {
             children: <Widget>[
               Text(
                 "2432",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     color: const Color(0xffbbFF4956),
                     fontWeight: FontWeight.bold,
                     fontSize: 12),
@@ -40,7 +40,7 @@ class PrizePool extends StatelessWidget {
               ),
               Text(
                 "players joined",
-                style: GoogleFonts.poppins(color: Colors.white, fontSize: 12),
+                style: GoogleFonts.roboto(color: Colors.white, fontSize: 12),
               ),
             ],
           ),
@@ -65,7 +65,7 @@ class PrizePool extends StatelessWidget {
                           child: Row(
                             children: <Widget>[
                               Text("$i - 0",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold)),
                               Spacer(),
                               Image.asset(
@@ -76,7 +76,7 @@ class PrizePool extends StatelessWidget {
                                 width: 5,
                               ),
                               Text("$i,000",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15)),
                             ],
@@ -97,7 +97,7 @@ class PrizePool extends StatelessWidget {
       children: <Widget>[
         Text(
           "$title",
-          style: GoogleFonts.poppins(fontSize: 11, color: Colors.grey),
+          style: GoogleFonts.roboto(fontSize: 11, color: Colors.grey),
         ),
         Row(
           children: <Widget>[
@@ -110,7 +110,7 @@ class PrizePool extends StatelessWidget {
             ),
             Text(
               "$count",
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 15,
                   color: Colors.black,
                   fontWeight: FontWeight.w400),

@@ -29,10 +29,10 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
             children: <Widget>[
               Text(
                 "Player Roles",
-                style: GoogleFonts.poppins(fontSize: 14),
+                style: GoogleFonts.roboto(fontSize: 14),
               ),
               Text("IND vs AUS 03H : 12M : 56s",
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontSize: 12, fontWeight: FontWeight.w300))
             ],
           ),
@@ -50,7 +50,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                 child: OutlineButton(
                     child: Text(
                       "Preview",
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           color: const Color(0xffbbFF4956),
                           fontWeight: FontWeight.bold),
                     ),
@@ -94,7 +94,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                       child: Text(
                         'Create Team',
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             fontSize: 14,
                             color: Colors.white),
@@ -119,7 +119,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                   Text(
                     "Choose Captain, Vice-Captain & Player of the Match",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         color: const Color(0xffbb808080),
                         fontSize: 12,
                         fontWeight: FontWeight.bold),
@@ -131,7 +131,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                     "Captain will get 2x points, Vice-Captain will get 1.5x points & Player of the Match will get 50 points bonus",
                     textAlign: TextAlign.center,
                     maxLines: 2,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         color: const Color(0xffbb808080),
                         fontSize: 12,
                         fontWeight: FontWeight.w400),
@@ -145,7 +145,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                       "Wicket Keeper",
                       textAlign: TextAlign.left,
                       maxLines: 2,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           color: const Color(0xffbb323232),
                           fontSize: 13,
                           fontWeight: FontWeight.w600),
@@ -188,7 +188,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                                 Text(
                                   "MS Dhoni",
                                   textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: const Color(0xffbb323232),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600),
@@ -197,7 +197,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                                   "KXIP",
                                   textAlign: TextAlign.left,
                                   maxLines: 2,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: const Color(0xffbb808080),
                                       fontSize: 11,
                                       fontWeight: FontWeight.w600),
@@ -228,7 +228,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                       "Batsmen",
                       textAlign: TextAlign.left,
                       maxLines: 2,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           color: const Color(0xffbb323232),
                           fontSize: 13,
                           fontWeight: FontWeight.w600),
@@ -271,7 +271,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                                 Text(
                                   "MS Dhoni",
                                   textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: const Color(0xffbb323232),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600),
@@ -280,7 +280,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                                   "KXIP",
                                   textAlign: TextAlign.left,
                                   maxLines: 2,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: const Color(0xffbb808080),
                                       fontSize: 11,
                                       fontWeight: FontWeight.w600),
@@ -311,7 +311,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                       "Bowler",
                       textAlign: TextAlign.left,
                       maxLines: 2,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           color: const Color(0xffbb323232),
                           fontSize: 13,
                           fontWeight: FontWeight.w600),
@@ -355,7 +355,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                                 Text(
                                   "MS Dhoni",
                                   textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: const Color(0xffbb323232),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600),
@@ -364,7 +364,7 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
                                   "KXIP",
                                   textAlign: TextAlign.left,
                                   maxLines: 2,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: const Color(0xffbb808080),
                                       fontSize: 11,
                                       fontWeight: FontWeight.w600),
@@ -423,14 +423,14 @@ class _SelectCaptainViceCaptainState extends State<SelectCaptainViceCaptain> {
               ),
               child: Text(
                 players.getCapText(posi, id),
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     fontSize: posi == "manOfMatch" ? 8 : 11,
                     color: Colors.white),
               )),
         ),
         Text(
           "$per%",
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.roboto(
               fontSize: 10, color: const Color(0xffbb808080)),
         ),
       ],

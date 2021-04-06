@@ -93,7 +93,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                         children: [
                           Text(
                             'NOTE:',
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 color: Colors.red,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15),
@@ -101,7 +101,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                           Container(
                               padding: EdgeInsets.only(left: 10),
                               child: Text('${widget.data['quation']}',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: Colors.green,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15))),
@@ -116,7 +116,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                           'Possible withdraw amount: ${widget.data['withDrawlAmount']}',
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 15))),
@@ -151,7 +151,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                     : 1),
                                       ),
                                       child: Text('Google Pay',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               color: Colors.white))),
                                 ),
                               ),
@@ -182,7 +182,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 : 1),
                                       ),
                                       child: Text('Paytm',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               color: Colors.white))),
                                 ),
                               ),
@@ -213,7 +213,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 : 1),
                                       ),
                                       child: Text('PhonePay',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               color: Colors.white))),
                                 ),
                               ),
@@ -249,7 +249,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 : 1),
                                       ),
                                       child: Text('Paypal ',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               color: Colors.white))),
                                 ),
                               ),
@@ -280,7 +280,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                                 : 1),
                                       ),
                                       child: Text('Payoneer',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               color: Colors.white))),
                                 ),
                               ),
@@ -333,7 +333,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                             onSaved: (val) {
                               payment['mobile_number'] = val.trim();
                             },
-                            style: GoogleFonts.poppins(color: Colors.white),
+                            style: GoogleFonts.roboto(color: Colors.white),
                             decoration: InputDecoration(
                                 contentPadding: EdgeInsets.symmetric(
                                   vertical: 18,
@@ -344,7 +344,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                   color: AppColors.buttonColor,
                                 ),
                                 labelStyle:
-                                    GoogleFonts.poppins(color: Colors.white),
+                                    GoogleFonts.roboto(color: Colors.white),
                                 labelText: user.userDetails[0].country
                                         .toLowerCase()
                                         .contains('india')
@@ -371,14 +371,14 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                               'Total Withdraw possible:${widget.data['withDrawlAmount']}',
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.left,
                             ),
                           ),
                           TextFormField(
-                            style: GoogleFonts.poppins(color: Colors.white),
+                            style: GoogleFonts.roboto(color: Colors.white),
                             keyboardType: TextInputType.number,
                             validator: (val) {
                               val = val.trim();
@@ -403,7 +403,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                   color: AppColors.buttonColor,
                                 ),
                                 labelStyle:
-                                    GoogleFonts.poppins(color: Colors.white),
+                                    GoogleFonts.roboto(color: Colors.white),
                                 labelText:
                                     'Withdraw amount more than ${widget.data['minimumWithDrawl']}',
                                 border: OutlineInputBorder(
@@ -438,7 +438,7 @@ class _PaymentWithdrawState extends State<PaymentWithdraw> {
                                             BorderRadius.circular(30)),
                                     child: Text(
                                       'Proceed',
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           color: Colors.white, fontSize: 18),
                                     ),
                                   ),

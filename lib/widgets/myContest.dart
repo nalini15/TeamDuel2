@@ -35,7 +35,7 @@ class MyContest extends StatelessWidget {
               Text(
                 'Racing Contest From 20-June to 25-July',
                 textAlign: TextAlign.left,
-                style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
               ),
               Spacer(),
               Icon(FontAwesomeIcons.infoCircle)
@@ -84,7 +84,7 @@ class MyContest extends StatelessWidget {
               children: [
                 Text(
                   'Ends In: ',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       color: Colors.red,
                       fontSize: 15,
                       fontWeight: FontWeight.bold),
@@ -101,7 +101,7 @@ class MyContest extends StatelessWidget {
                 //   defaultMin: "**",
                 //   defaultSec: "**",
                 //   textStyle:
-                //       GoogleFonts.poppins(color: Colors.red, fontSize: 15),
+                //       GoogleFonts.roboto(color: Colors.red, fontSize: 15),
                 // )
               ],
             ),

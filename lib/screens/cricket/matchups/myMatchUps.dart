@@ -41,7 +41,7 @@ class _MyMatchUpsState extends State<MyMatchUps> {
         backgroundColor: AppColors.mainColor,
         title: Text(
           "My Matchups",
-          style: GoogleFonts.poppins(color: Colors.white),
+          style: GoogleFonts.roboto(color: Colors.white),
         ),
       ),
       body: SafeArea(
@@ -70,7 +70,7 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                 children: <Widget>[
                                   Text(
                                     "Total Winnings",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w300,
                                         fontSize: 11),
@@ -86,7 +86,7 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                       ),
                                       Text(
                                           "${match.joinedMatchupsDetail[0].totalWinnings}",
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white,
                                               fontSize: 15))
@@ -98,14 +98,14 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                 children: <Widget>[
                                   Text(
                                     "Matchups won",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.w300,
                                         color: Colors.white,
                                         fontSize: 11),
                                   ),
                                   Text(
                                       "${match.joinedMatchupsDetail[0].wonCount}",
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                           fontSize: 15)),
@@ -115,14 +115,14 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                 children: <Widget>[
                                   Text(
                                     "Matchups Lost",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.w300,
                                         color: Colors.white,
                                         fontSize: 11),
                                   ),
                                   Text(
                                       "${match.joinedMatchupsDetail[0].lostCount}",
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                           fontSize: 15)),
@@ -200,7 +200,7 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                               ),
                                               Text(
                                                 "${data[i].raceDetails.raceName} (${data[i].raceDetails.raceDate})",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     color: Colors.white),
                                               ),
                                               Spacer(),
@@ -215,8 +215,16 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                                             9)),
                                                 child: Text(
                                                   "${data[i].raceDetails.raceStatus}",
-                                                  style: GoogleFonts.poppins(
-                                                    // color: Colors.white,
+                                                  style: GoogleFonts.roboto(
+                                                    color: "${data[i].raceDetails.raceStatus} " ==
+                                                            "Won"
+                                                        ? Colors.green
+                                                        : data[i]
+                                                                    .raceDetails
+                                                                    .raceStatus ==
+                                                                "Lost"
+                                                            ? Colors.red
+                                                            : Colors.black,
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 11,
                                                   ),
@@ -238,8 +246,9 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                                       .spaceBetween,
                                               children: <Widget>[
                                                 Text("${matchupOne.horseName}",
-                                                    style: GoogleFonts.poppins(
-                                                      color: Colors.white,
+                                                    style: GoogleFonts.roboto(
+                                                      color:
+                                                          AppColors.buttonColor,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       fontSize: 14,
@@ -307,7 +316,7 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                                             style: GoogleFonts
                                                                 .poppins(
                                                               color:
-                                                                  Colors.grey,
+                                                                  Colors.white,
                                                               fontSize: 12,
                                                             )),
                                                       ),
@@ -315,7 +324,8 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                                         width: 2,
                                                       ),
                                                       Icon(
-                                                        FontAwesomeIcons.star,
+                                                        FontAwesomeIcons
+                                                            .solidStar,
                                                         color: Colors.yellow,
                                                         size: 10,
                                                       ),
@@ -332,7 +342,41 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                                             fontSize: 12,
                                                           )),
                                                       SizedBox(
-                                                        width: 20,
+                                                        width: 10,
+                                                      ),
+                                                      Container(
+                                                          height: 25,
+                                                          width: 25,
+                                                          alignment:
+                                                              Alignment.center,
+                                                          decoration: BoxDecoration(
+                                                              color: Colors.red,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          3)),
+                                                          child: data[i].type ==
+                                                                  "cricket"
+                                                              ? Container(
+                                                                  child: Image
+                                                                      .network(
+                                                                  matchupTwo
+                                                                      .jersy,
+                                                                ))
+                                                              : Text(
+                                                                  "${data[i].raceId}",
+                                                                  style: GoogleFonts
+                                                                      .poppins(
+                                                                    // color: Colors.white,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                    fontSize:
+                                                                        11,
+                                                                  ),
+                                                                )),
+                                                      SizedBox(
+                                                        width: 8,
                                                       ),
                                                       GestureDetector(
                                                         onTap: () {
@@ -374,6 +418,18 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                         ),
                         SizedBox(
                           height: 10,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          height: 50,
+                          margin: EdgeInsets.symmetric(horizontal: 13),
+                          color: Colors.black,
+                          child: Center(
+                            child: AdBanner(
+                              stringKey: ams.getBannerAppId(),
+                              size: AdmobBannerSize.FULL_BANNER,
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -449,7 +505,7 @@ class _MyMatchUpsState extends State<MyMatchUps> {
 //                                                 padding: EdgeInsets.all(6),
 //                                                 child: Text(
 //                                                   "VS",
-//                                                   style: GoogleFonts.poppins(
+//                                                   style: GoogleFonts.roboto(
 //                                                       fontSize: 12,
 //                                                       color: Colors.black),
 //                                                 ),
@@ -561,7 +617,7 @@ class MyMatchUpsPlayers extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           softWrap: true,
                           maxLines: 2,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 12, fontWeight: FontWeight.bold),
                         ),
                         Text(
@@ -569,7 +625,7 @@ class MyMatchUpsPlayers extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           softWrap: true,
                           maxLines: 1,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 10, fontWeight: FontWeight.w300),
                         ),
                       ],
@@ -589,7 +645,7 @@ class MyMatchUpsPlayers extends StatelessWidget {
                       "$teams",
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                         fontSize: 10,
                       ),
                     ),
@@ -600,7 +656,7 @@ class MyMatchUpsPlayers extends StatelessWidget {
                       status == "true" ? "Live" : "Completed",
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           fontSize: 10, color: AppColors.mainColor),
                     ),
                   ],
@@ -612,7 +668,7 @@ class MyMatchUpsPlayers extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Score: ",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                       fontSize: 10,
                     ),
                   ),
@@ -623,7 +679,7 @@ class MyMatchUpsPlayers extends StatelessWidget {
                     "$score",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontSize: 10, color: AppColors.mainColor),
                   ),
                 ],

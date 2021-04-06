@@ -19,7 +19,7 @@
 // //                                                   child: Text(
 // //                                                     '${items.prizeBreakUp[0].prize} R to 1st',
 // //                                                     textAlign: TextAlign.left,
-// //                                                     style: GoogleFonts.poppins(
+// //                                                     style: GoogleFonts.roboto(
 // //                                                         color: Colors.white),
 // //                                                   ),
 // //                                                 ),

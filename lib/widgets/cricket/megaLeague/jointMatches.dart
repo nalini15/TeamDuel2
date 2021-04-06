@@ -34,12 +34,12 @@ class JointMatchesMegaLeagueScreen extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           "Match 2$i",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 11, color: const Color(0xffbb777777)),
                         ),
                         Text(
                           "03h : 12m : 56s",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 11, color: const Color(0xffbbFF4956)),
                         ),
                       ],
@@ -58,7 +58,7 @@ class JointMatchesMegaLeagueScreen extends StatelessWidget {
                             ),
                             Text(
                               "KXIP",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontSize: 11,
                                   color: const Color(0xffbb333333)),
                             )
@@ -70,7 +70,7 @@ class JointMatchesMegaLeagueScreen extends StatelessWidget {
                         Text(
                           "VS",
                           textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 12, color: const Color(0xffbb333333)),
                         ),
                         SizedBox(
@@ -87,7 +87,7 @@ class JointMatchesMegaLeagueScreen extends StatelessWidget {
                             ),
                             Text(
                               "KXIP",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontSize: 11,
                                   color: const Color(0xffbb333333)),
                             )
@@ -132,7 +132,7 @@ class JointMatchesMegaLeagueScreen extends StatelessWidget {
                                   child: OutlineButton(
                                 child: Text(
                                   "My Teams($i)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontSize: 12, color: AppColors.mainColor),
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -177,7 +177,7 @@ class JointMatchesMegaLeagueScreen extends StatelessWidget {
                                       child: Text(
                                         'JOIN FREE',
                                         textAlign: TextAlign.center,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12,
                                             color: Colors.white),

@@ -53,7 +53,10 @@ class _TransactionHistoryState extends State<TransactionHistory> {
               return Consumer<User>(
                 builder: (con, user, _) => user.transaction.isEmpty
                     ? Center(
-                        child: Text('You have no transactions done yet!'),
+                        child: Text(
+                          'You have no transactions done yet!',
+                          style: GoogleFonts.roboto(color: Colors.white),
+                        ),
                       )
                     : ListView.builder(
                         primary: false,
@@ -65,7 +68,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                     child: Center(
                                       child: Text(
                                         "Addmob",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             color: Colors.white),
                                       ),
                                     ),
@@ -93,17 +96,17 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                       DateTime.parse(
                                           user.transaction[i].createdAt),
                                     ),
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: Colors.white, fontSize: 10),
                                   ),
                                   Text(
                                     "#${user.transaction[i].id}",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: Colors.grey, fontSize: 10),
                                   ),
                                   Text(
                                     "${user.transaction[i].paymentStatus}",
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: user.transaction[i].paymentStatus
                                                     .toLowerCase() ==
                                                 "pending"
@@ -120,7 +123,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                       ),
                                       Text(
                                         "${user.transaction[i].withdrawAmount}",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             color: Colors.grey, fontSize: 10),
                                       ),
                                     ],
@@ -142,7 +145,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
 // ListTile(
 //                               title: Text(
 //                                 'Amount: ${user.transaction[i].withdrawAmount}',
-//                                 style: GoogleFonts.poppins(
+//                                 style: GoogleFonts.roboto(
 //                                     fontSize: 18, fontWeight: FontWeight.bold),
 //                               ),
 //                               subtitle: Column(
@@ -150,7 +153,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
 //                                 children: [
 //                                   Text(
 //                                     ' ${user.transaction[i].mobileNumber}  (${user.transaction[i].paymentStatus})',
-//                                     style: GoogleFonts.poppins(
+//                                     style: GoogleFonts.roboto(
 //                                         fontSize: 12,
 //                                         fontWeight: FontWeight.w300),
 //                                   ),
@@ -186,7 +189,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
 //                                     DateFormat('yyyy-MM-dd').format(
 //                                         DateTime.parse(
 //                                             user.transaction[i].createdAt)),
-//                                     style: GoogleFonts.poppins(
+//                                     style: GoogleFonts.roboto(
 //                                         fontSize: 10,
 //                                         fontWeight: FontWeight.w300),
 //                                   )

@@ -35,7 +35,7 @@ class MyContestCompleted extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             "Match 2$i",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 11, color: const Color(0xffbb777777)),
                           ),
                           SizedBox(
@@ -43,7 +43,7 @@ class MyContestCompleted extends StatelessWidget {
                           ),
                           Text(
                             "COMPLETED",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 11, color: const Color(0xffbbFF4956)),
                           ),
                           SizedBox(
@@ -80,7 +80,7 @@ class MyContestCompleted extends StatelessWidget {
                                   child: Text(
                                     'WINNERS',
                                     textAlign: TextAlign.center,
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12,
                                         color: Colors.white),
@@ -105,7 +105,7 @@ class MyContestCompleted extends StatelessWidget {
                               ),
                               Text(
                                 "KXIP",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontSize: 11,
                                     color: const Color(0xffbb333333)),
                               )
@@ -117,7 +117,7 @@ class MyContestCompleted extends StatelessWidget {
                           Text(
                             "VS",
                             textAlign: TextAlign.start,
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontSize: 12, color: const Color(0xffbb333333)),
                           ),
                           SizedBox(
@@ -134,7 +134,7 @@ class MyContestCompleted extends StatelessWidget {
                               ),
                               Text(
                                 "KXIP",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontSize: 11,
                                     color: const Color(0xffbb333333)),
                               )
@@ -157,17 +157,17 @@ class MyContestCompleted extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "#28",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold, fontSize: 12),
                       ),
                       Text(
                         "Team 1",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.w400, fontSize: 12),
                       ),
                       Text(
                         "282.5 pts",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             color: const Color(0xffbb777777),
                             fontWeight: FontWeight.w400,
                             fontSize: 12),
@@ -176,7 +176,7 @@ class MyContestCompleted extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             "100 BP",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 color: const Color(0xffFF4956),
                                 fontWeight: FontWeight.w400,
                                 fontSize: 12),

@@ -85,7 +85,7 @@ class _PickHorseState extends State<PickHorse> {
             Text(
               'Hyderabad - Race 1',
               textAlign: TextAlign.left,
-              style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+              style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -121,7 +121,7 @@ class _PickHorseState extends State<PickHorse> {
                                         hintText: 'Stable 1',
                                         filled: true,
                                         fillColor: Colors.white,
-                                        errorStyle: GoogleFonts.poppins(
+                                        errorStyle: GoogleFonts.roboto(
                                             color: Colors.yellow),
                                       ),
                                       items: pickHorse
@@ -145,7 +145,7 @@ class _PickHorseState extends State<PickHorse> {
                         alignment: Alignment.center,
                         child: Text(
                           'Ticket ${ticketStable.stable} Budget Left : ${pickHorse.horse.pickHorse[0].tickets[ticketStable.stableIndex].ticketBudget}',
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 15, fontWeight: FontWeight.w400),
                         )),
                     buildSizedBox(buildHeight(context), 0.02),
@@ -162,33 +162,33 @@ class _PickHorseState extends State<PickHorse> {
                         children: <Widget>[
                           Text(
                             'H.No',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold),
+                            style:
+                                GoogleFonts.roboto(fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Name',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold),
+                            style:
+                                GoogleFonts.roboto(fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Sel by',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold),
+                            style:
+                                GoogleFonts.roboto(fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'PTS',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold),
+                            style:
+                                GoogleFonts.roboto(fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Credits',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold),
+                            style:
+                                GoogleFonts.roboto(fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Spent',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold),
+                            style:
+                                GoogleFonts.roboto(fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -224,7 +224,7 @@ class _PickHorseState extends State<PickHorse> {
                                             children: <Widget>[
                                               Text(
                                                 '${items.horseName}',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 16,
                                                     fontWeight:
                                                         FontWeight.bold),
@@ -232,7 +232,7 @@ class _PickHorseState extends State<PickHorse> {
                                               Spacer(),
                                               Text(
                                                 '${items.playPoints} Cr',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 14,
                                                     fontWeight:
                                                         FontWeight.w400),
@@ -246,7 +246,7 @@ class _PickHorseState extends State<PickHorse> {
                                             backgroundColor: Colors.transparent,
                                             child: Text(
                                               '${items.horseId}',
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.roboto(
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.bold),
                                             ),
@@ -266,7 +266,7 @@ class _PickHorseState extends State<PickHorse> {
                                                   '${items.jockey}',
                                                   overflow:
                                                       TextOverflow.ellipsis,
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.roboto(
                                                       fontSize: 15,
                                                       fontWeight:
                                                           FontWeight.w400),
@@ -277,7 +277,7 @@ class _PickHorseState extends State<PickHorse> {
                                                   '${items.trainer}',
                                                   overflow:
                                                       TextOverflow.ellipsis,
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.roboto(
                                                       fontSize: 15,
                                                       fontWeight:
                                                           FontWeight.w400),
@@ -297,7 +297,7 @@ class _PickHorseState extends State<PickHorse> {
                                             children: <Widget>[
                                               Text(
                                                 '${items.playerPerformance}',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 15,
                                                     fontWeight:
                                                         FontWeight.w400),
@@ -306,7 +306,7 @@ class _PickHorseState extends State<PickHorse> {
                                                   buildHeight(context), 0.01),
                                               Text(
                                                 'PTS',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 15,
                                                     fontWeight:
                                                         FontWeight.w400),
@@ -353,7 +353,7 @@ class _PickHorseState extends State<PickHorse> {
                                                 Text(
                                                   '1',
                                                   textAlign: TextAlign.center,
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.roboto(
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),

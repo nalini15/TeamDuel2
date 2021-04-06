@@ -18,7 +18,7 @@ Column prizeRow(String amt, String title) {
     children: <Widget>[
       Text(
         "$title",
-        style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
+        style: GoogleFonts.roboto(fontSize: 12, color: Colors.grey),
       ),
       Row(
         children: <Widget>[
@@ -33,7 +33,7 @@ Column prizeRow(String amt, String title) {
           ),
           Text(
             "$amt",
-            style: GoogleFonts.poppins(fontSize: 13, color: Colors.black),
+            style: GoogleFonts.roboto(fontSize: 13, color: Colors.black),
           )
         ],
       )
@@ -62,14 +62,14 @@ Row firstRow(
               "$title",
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
-              style: GoogleFonts.poppins(
-                  fontSize: 15, fontWeight: FontWeight.bold),
+              style:
+                  GoogleFonts.roboto(fontSize: 15, fontWeight: FontWeight.bold),
             ),
             Text(
               "$date",
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
-              style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
+              style: GoogleFonts.roboto(fontSize: 12, color: Colors.grey),
             ),
             Row(
               children: <Widget>[
@@ -77,14 +77,14 @@ Row firstRow(
                   "Ends in",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
-                  style: GoogleFonts.poppins(fontSize: 11, color: Colors.grey),
+                  style: GoogleFonts.roboto(fontSize: 11, color: Colors.grey),
                 ),
                 Expanded(
                   child: Text(
                     "  $timmer",
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontSize: 11, color: AppColors.mainColor),
                   ),
                 ),
@@ -107,8 +107,8 @@ Row firstRow(
             child: Text(
               "$matches Matches",
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
-                  fontSize: 10, fontWeight: FontWeight.w600),
+              style:
+                  GoogleFonts.roboto(fontSize: 10, fontWeight: FontWeight.w600),
             ),
           ),
           SizedBox(
@@ -122,7 +122,7 @@ Row firstRow(
                 height: 22,
                 child: Text(
                   "C",
-                  style: GoogleFonts.poppins(fontSize: 10, color: Colors.grey),
+                  style: GoogleFonts.roboto(fontSize: 10, color: Colors.grey),
                 ),
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -137,7 +137,7 @@ Row firstRow(
                 height: 22,
                 child: Text(
                   "S",
-                  style: GoogleFonts.poppins(fontSize: 10, color: Colors.grey),
+                  style: GoogleFonts.roboto(fontSize: 10, color: Colors.grey),
                 ),
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -160,7 +160,7 @@ void showAlertDialogNoFilter(BuildContext context, [String text]) {
 }
 
 Text appbarTitle(String title) {
-  return Text("$title", style: GoogleFonts.poppins(color: Colors.white));
+  return Text("$title", style: GoogleFonts.roboto(color: Colors.white));
 }
 
 Container appBarGradientContainer() {
@@ -178,7 +178,7 @@ Container thirdRow(String rank, String teams, String pts) {
       children: <Widget>[
         Text(
           "#$rank",
-          style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 12),
+          style: GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 12),
         ),
         SizedBox(
           width: 2,
@@ -195,12 +195,12 @@ Container thirdRow(String rank, String teams, String pts) {
         ),
         Text(
           "Team $teams",
-          style: GoogleFonts.poppins(fontSize: 12),
+          style: GoogleFonts.roboto(fontSize: 12),
         ),
         Spacer(),
         Text(
           "$pts pts",
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.roboto(
               fontSize: 12, color: const Color(0xffbb777777)),
         ),
       ],
@@ -237,12 +237,12 @@ Widget matchesBox(
             children: <Widget>[
               Text(
                 "Match $matchNo",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     color: const Color(0xffbb777777), fontSize: 11),
               ),
               Text(
                 "$live",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     color: const Color(0xffbbFF4956), fontSize: 11),
               ),
             ],
@@ -263,7 +263,7 @@ Widget matchesBox(
                   ),
                   Text(
                     "$team1",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontSize: 11, color: const Color(0xffbb333333)),
                   )
                 ],
@@ -274,7 +274,7 @@ Widget matchesBox(
               Text(
                 "VS",
                 textAlign: TextAlign.start,
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     fontSize: 12, color: const Color(0xffbb333333)),
               ),
               SizedBox(
@@ -292,7 +292,7 @@ Widget matchesBox(
                   ),
                   Text(
                     "$team2",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontSize: 11, color: const Color(0xffbb333333)),
                   )
                 ],
@@ -310,7 +310,7 @@ Column jointMatchesprizes(String title, String amt) {
     children: <Widget>[
       Text(
         "$title",
-        style: GoogleFonts.poppins(fontSize: 11, color: Colors.grey),
+        style: GoogleFonts.roboto(fontSize: 11, color: Colors.grey),
       ),
       Row(
         children: <Widget>[
@@ -323,7 +323,7 @@ Column jointMatchesprizes(String title, String amt) {
           ),
           Text(
             "$amt",
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w600, fontSize: 15, color: Colors.black),
           )
         ],
@@ -372,7 +372,7 @@ showDialogBox(BuildContext context) {
                             ),
                             Text(
                               "Mega Leagues",
-                              style: GoogleFonts.poppins(),
+                              style: GoogleFonts.roboto(),
                             )
                           ],
                         ),
@@ -402,7 +402,7 @@ showDialogBox(BuildContext context) {
                             ),
                             Text(
                               "MatchUps",
-                              style: GoogleFonts.poppins(),
+                              style: GoogleFonts.roboto(),
                             )
                           ],
                         ),
@@ -444,7 +444,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                         ),
                         Text(
                           "Available balance",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                         SizedBox(
@@ -462,7 +462,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                             ),
                             Text(
                               Coins.total == null ? '0' : Coins.total,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white),
                             ),
@@ -471,7 +471,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                         buildSizedBox(buildHeight(context), 0.03),
                         Text(
                           "Total matchups selected: ${states.cricketMatchups.toList().length + states.horseMatchups.toList().length}",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
@@ -483,7 +483,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                             Expanded(
                                 child: Text(
                               "Invest",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                 color: Colors.white,
                               ),
                               textAlign: TextAlign.center,
@@ -491,7 +491,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                             Expanded(
                                 child: Text(
                               "Payout type",
-                              style: GoogleFonts.poppins(color: Colors.white),
+                              style: GoogleFonts.roboto(color: Colors.white),
                               textAlign: TextAlign.center,
                             )),
                           ],
@@ -506,7 +506,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                                   children: <Widget>[
                                     // Text(
                                     //   "I bet",
-                                    //   style: GoogleFonts.poppins(fontSize: 12),
+                                    //   style: GoogleFonts.roboto(fontSize: 12),
                                     // ),
                                     SizedBox(
                                       width: 20,
@@ -529,7 +529,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                                         child: Text(
                                           "-",
                                           textAlign: TextAlign.center,
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                             color: Colors.white,
                                           ),
                                         ),
@@ -546,7 +546,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                                       width: 5,
                                     ),
                                     Text("${states.invest}",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 12,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold)),
@@ -571,7 +571,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                                         child: Text(
                                           "+",
                                           textAlign: TextAlign.center,
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                             color: Colors.white,
                                           ),
                                         ),
@@ -616,7 +616,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                                                     InvestType.coins
                                                 ? "Coins"
                                                 : "Chips",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                               fontSize: 15,
                                               color: Colors.white,
                                             ),
@@ -640,7 +640,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                         buildSizedBox(buildHeight(context), 0.04),
                         Text(
                           "Payout possible: ${matchups.maxpayout}",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -659,7 +659,7 @@ showDialogSubmitDialog(BuildContext context, Function sub, Function payouts) {
                             Navigator.of(context).pop();
                           },
                           child: Text("Pay \$${states.invest}",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontSize: 15, color: Colors.white)),
                         ),
                         // buildSizedBox(buildHeight(context), 0.03),
@@ -741,16 +741,17 @@ class MatchUp extends StatelessWidget {
                                   softWrap: true,
                                   textAlign: TextAlign.left,
                                   overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontSize: 12,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
                               star
-                                  ? Image.asset(
-                                      "assets/images/star.png",
-                                      width: 10,
+                                  ? Icon(
+                                      FontAwesomeIcons.solidStar,
+                                      color: Color.fromRGBO(252, 160, 49, 1),
+                                      size: 10,
                                     )
                                   : Container()
                             ],
@@ -766,14 +767,14 @@ class MatchUp extends StatelessWidget {
               //   children: <Widget>[
               //     Text(
               //       "IND vs AUS",
-              //       style: GoogleFonts.poppins(
+              //       style: GoogleFonts.roboto(
               //         fontSize: 10,
               //       ),
               //     ),
               //     Spacer(),
               //     Text(
               //       "03h : 12m : 56s",
-              //       style: GoogleFonts.poppins(
+              //       style: GoogleFonts.roboto(
               //           fontSize: 10, color: AppColors.mainColor),
               //     ),
               //   ],
@@ -785,7 +786,7 @@ class MatchUp extends StatelessWidget {
                     maxLines: 1,
                     textAlign: TextAlign.left,
                     overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         color: Colors.white,
                         fontSize: 12,
                         fontWeight: FontWeight.w300),
@@ -795,7 +796,7 @@ class MatchUp extends StatelessWidget {
                     maxLines: 1,
                     textAlign: TextAlign.left,
                     overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         color: Colors.white,
                         fontSize: 12,
                         fontWeight: FontWeight.w300),
@@ -815,6 +816,7 @@ class HorseMatchUp extends StatelessWidget {
   String trainer;
   bool star;
   bool isRight;
+  bool isHound;
   HorseMatchUp(
       {Key key,
       this.horseName,
@@ -822,11 +824,87 @@ class HorseMatchUp extends StatelessWidget {
       this.jockey,
       this.star,
       this.isRight,
+      this.isHound,
       this.trainer})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var color;
+    if (!isHound) {
+      if (horseNo == "1") {
+        color = Colors.red;
+      } else if (horseNo == "2") {
+        color = Colors.white;
+      } else if (horseNo == "3") {
+        color = Colors.blue;
+      } else if (horseNo == "4") {
+        color = Colors.yellow;
+      } else if (horseNo == "5") {
+        color = Colors.green;
+      } else if (horseNo == "6") {
+        color = Colors.black12;
+      } else if (horseNo == "7") {
+        color = Colors.orange;
+      } else if (horseNo == "8") {
+        color = Colors.pink;
+      } else if (horseNo == "9") {
+        color = Colors.blue;
+      } else if (horseNo == "10") {
+        color = Colors.purple;
+      } else if (horseNo == "11") {
+        color = Colors.grey;
+      } else if (horseNo == "12") {
+        color = Colors.lightGreen;
+      } else if (horseNo == "13") {
+        color = Colors.brown;
+      } else if (horseNo == "14") {
+        color = Color.fromRGBO(128, 0, 0, 1);
+      } else if (horseNo == "15") {
+        color = Color.fromRGBO(199, 172, 138, 1);
+      } else if (horseNo == "16") {
+        color = Color.fromRGBO(189, 216, 224, 1);
+      } else if (horseNo == "17") {
+        color = Color.fromRGBO(60, 46, 88, 1);
+      } else if (horseNo == "18") {
+        color = Color.fromRGBO(49, 92, 48, 1);
+      } else if (horseNo == "19") {
+        color = Color.fromRGBO(48, 40, 65, 1);
+      } else if (horseNo == "20") {
+        color = Color.fromRGBO(185, 82, 146, 1);
+      } else if (horseNo == "21") {
+        color = Color.fromRGBO(147, 112, 219, 1);
+      } else if (horseNo == "22") {
+        color = Colors.black12;
+      } else if (horseNo == "23") {
+        color = Colors.black12;
+      } else if (horseNo == "24") {
+        color = Colors.black12;
+      }
+    } else {
+      if (horseNo == "1") {
+        color = Colors.red;
+      } else if (horseNo == "2") {
+        color = Color.fromRGBO(36, 65, 145, 1);
+      } else if (horseNo == "3") {
+        color = Color.fromRGBO(255, 255, 255, 1);
+      } else if (horseNo == "4") {
+        color = Color.fromRGBO(39, 39, 39, 1);
+      } else if (horseNo == "5") {
+        color = Color.fromRGBO(31, 31, 31, 1);
+      } else if (horseNo == "6") {
+        color = Color.fromRGBO(201, 25, 141, 1);
+      } else if (horseNo == "7") {
+        color = Color.fromRGBO(252, 134, 2, 1);
+      } else if (horseNo == "8") {
+        color = Color.fromRGBO(16, 9, 1, 1);
+      } else if (horseNo == "9") {
+        color = Color.fromRGBO(32, 49, 70, 0.91);
+      } else if (horseNo == "10") {
+        color = Color.fromRGBO(32, 49, 70, 0.91);
+      }
+    }
+
     return Card(
       color: AppColors.mainColorLight,
       elevation: 2,
@@ -843,15 +921,14 @@ class HorseMatchUp extends StatelessWidget {
                       height: 28,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: isRight ? Colors.white : Colors.red,
+                        color: color,
                         border: Border.all(width: 1, color: Colors.black),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
                         "$horseNo",
-                        style: GoogleFonts.poppins(
-                            color: isRight ? Colors.black : Colors.white,
-                            fontSize: 12),
+                        style: GoogleFonts.roboto(
+                            color: Colors.black, fontSize: 12),
                       )),
                   SizedBox(
                     width: 8,
@@ -869,16 +946,17 @@ class HorseMatchUp extends StatelessWidget {
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 softWrap: true,
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
                             star
-                                ? Image.asset(
-                                    "assets/images/star.png",
-                                    width: 10,
+                                ? Icon(
+                                    FontAwesomeIcons.solidStar,
+                                    color: Color.fromRGBO(252, 160, 49, 1),
+                                    size: 10,
                                   )
                                 : Container()
                           ],
@@ -895,11 +973,11 @@ class HorseMatchUp extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       child: Text(
-                        "T : $trainer",
+                        "$jockey",
                         overflow: TextOverflow.ellipsis,
                         softWrap: true,
                         maxLines: 1,
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                           color: Colors.white,
                           fontSize: 10,
                         ),
@@ -915,10 +993,10 @@ class HorseMatchUp extends StatelessWidget {
               Container(
                 width: double.infinity,
                 child: Text(
-                  "$jockey",
+                  "T : $trainer",
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                     color: Colors.white,
                     fontSize: 10,
                   ),
@@ -932,11 +1010,27 @@ class HorseMatchUp extends StatelessWidget {
 
 Center noMatchups(BuildContext context) {
   return Center(
-    child: Container(
-        margin: EdgeInsets.only(top: buildHeight(context) * 0.10),
-        child: Text(
-          "No Matchups Available",
-          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold),
-        )),
+    child: Column(
+      children: [
+        Container(
+            margin: EdgeInsets.only(top: buildHeight(context) * 0.10),
+            child: Text(
+              "No Matchups Available",
+              style: GoogleFonts.roboto(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            )),
+        Container(
+            margin: EdgeInsets.only(top: 10),
+            child: Text(
+              "Please Check Another Date or Sport",
+              style: GoogleFonts.roboto(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromRGBO(0, 148, 255, 0.97)),
+            )),
+      ],
+    ),
   );
 }

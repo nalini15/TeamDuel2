@@ -38,7 +38,7 @@ class _JoinTicketMegaGrandState extends State<JoinTicketMegaGrand> {
       content: Text(
         stringList,
         textAlign: TextAlign.center,
-        style: GoogleFonts.poppins(
+        style: GoogleFonts.roboto(
             fontSize: 13.0, fontWeight: FontWeight.bold, color: Colors.red),
       ),
       duration: Duration(seconds: 2),
@@ -132,7 +132,7 @@ class _JoinTicketMegaGrandState extends State<JoinTicketMegaGrand> {
                 buildSizedBox(buildHeight(context), 0.02),
                 Text(
                   widget.title,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                     fontSize: 24.0,
                     fontWeight: FontWeight.w700,
                   ),
@@ -178,7 +178,7 @@ class _JoinTicketMegaGrandState extends State<JoinTicketMegaGrand> {
                     opacity: error.isEmpty ? 0 : 1,
                     child: Text(
                       error.isEmpty ? '' : error,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           color: error == 'Refer Code sent to your friend'
                               ? Colors.green
                               : Colors.red,

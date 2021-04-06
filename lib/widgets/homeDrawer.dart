@@ -144,7 +144,7 @@ class HomeDrawer extends StatelessWidget {
                                     children: <Widget>[
                                       Text(
                                         user.userDetails[0].name,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             color: Colors.white, fontSize: 16),
                                       ),
                                     ],
@@ -159,7 +159,7 @@ class HomeDrawer extends StatelessWidget {
                                 //   child: Text(user.userDetails[0].email,
                                 //       overflow: TextOverflow.ellipsis,
                                 //       maxLines: 1,
-                                //       style: GoogleFonts.poppins(
+                                //       style: GoogleFonts.roboto(
                                 //           color: Colors.white, fontSize: 13)),
                                 // ),
                                 Container(
@@ -167,7 +167,7 @@ class HomeDrawer extends StatelessWidget {
                                   child: Text(user.userDetails[0].team_name,
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 1,
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           color: Colors.white, fontSize: 13)),
                                 ),
                                 SizedBox(
@@ -210,7 +210,7 @@ class HomeDrawer extends StatelessWidget {
                                         dense: true,
                                         title: Text(
                                           'Joined History',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               fontSize: 16,
                                               color: Colors.white,
                                               fontWeight: FontWeight.w400),
@@ -239,7 +239,7 @@ class HomeDrawer extends StatelessWidget {
                                       dense: true,
                                       title: Text(
                                         'Transactions History',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.w400),
@@ -264,7 +264,7 @@ class HomeDrawer extends StatelessWidget {
                                     //     // dense: true,
                                     //     title: Text(
                                     //       'My Wallet',
-                                    //       style: GoogleFonts.poppins(
+                                    //       style: GoogleFonts.roboto(
                                     //         fontSize: 16,
                                     //         color: Colors.white,
                                     //         fontWeight: FontWeight.w400,
@@ -282,7 +282,7 @@ class HomeDrawer extends StatelessWidget {
                                     //         //     EdgeInsets.symmetric(horizontal: 30),
                                     //         title: Text(
                                     //           'My Coins',
-                                    //           style: GoogleFonts.poppins(
+                                    //           style: GoogleFonts.roboto(
                                     //             fontSize: 13,
                                     //             color: Colors.white,
                                     //             fontWeight: FontWeight.w400,
@@ -294,7 +294,7 @@ class HomeDrawer extends StatelessWidget {
                                     //               : Coins.total.isEmpty
                                     //                   ? '0'
                                     //                   : Coins.total,
-                                    //           style: GoogleFonts.poppins(
+                                    //           style: GoogleFonts.roboto(
                                     //             fontSize: 13,
                                     //             color: Colors.white,
                                     //             fontWeight: FontWeight.w400,
@@ -312,7 +312,7 @@ class HomeDrawer extends StatelessWidget {
                                     //         //     EdgeInsets.symmetric(horizontal: 30),
                                     //         title: Text(
                                     //           'My Chips',
-                                    //           style: GoogleFonts.poppins(
+                                    //           style: GoogleFonts.roboto(
                                     //             fontSize: 13,
                                     //             color: Colors.white,
                                     //             fontWeight: FontWeight.w400,
@@ -324,7 +324,7 @@ class HomeDrawer extends StatelessWidget {
                                     //               : Chips.total.isEmpty
                                     //                   ? '0'
                                     //                   : Chips.total,
-                                    //           style: GoogleFonts.poppins(
+                                    //           style: GoogleFonts.roboto(
                                     //             fontSize: 13,
                                     //             color: Colors.white,
                                     //             fontWeight: FontWeight.w400,
@@ -358,7 +358,7 @@ class HomeDrawer extends StatelessWidget {
                               //     // dense: true,
                               //     title: Text(
                               //       'My Wallet',
-                              //       style: GoogleFonts.poppins(
+                              //       style: GoogleFonts.roboto(
                               //         fontSize: 16,
                               //         color: Colors.white,
                               //         fontWeight: FontWeight.w400,
@@ -434,7 +434,7 @@ class HomeDrawer extends StatelessWidget {
                                       dense: true,
                                       title: Text(
                                         'Personal Information',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.w400),
@@ -455,7 +455,7 @@ class HomeDrawer extends StatelessWidget {
                                       dense: true,
                                       title: Text(
                                         'Fantasy points System',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                           fontSize: 16,
                                           color: Colors.white,
                                           fontWeight: FontWeight.w400,
@@ -478,7 +478,7 @@ class HomeDrawer extends StatelessWidget {
                                         dense: true,
                                         title: Text(
                                           'How to Play',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               fontSize: 16,
                                               color: Colors.white,
                                               fontWeight: FontWeight.w400),
@@ -497,7 +497,7 @@ class HomeDrawer extends StatelessWidget {
                                       dense: true,
                                       title: Text(
                                         'Support',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.w400),
@@ -516,7 +516,7 @@ class HomeDrawer extends StatelessWidget {
                                       dense: true,
                                       title: Text(
                                         'Legalities',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.w400),
@@ -542,7 +542,7 @@ class HomeDrawer extends StatelessWidget {
                                     Text(
                                       "Follow us",
                                       textAlign: TextAlign.left,
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           fontSize: 14,
                                           color: Color.fromRGBO(
                                               186, 196, 208, 0.91),
@@ -590,12 +590,12 @@ class HomeDrawer extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
                                             Text("Version 1.0.0",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 10,
                                                     color: Color.fromRGBO(
                                                         186, 196, 208, 0.91))),
                                             Text("App Upto Date",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 10,
                                                     color: Color.fromRGBO(
                                                         186, 196, 208, 0.91)))
@@ -604,7 +604,7 @@ class HomeDrawer extends StatelessWidget {
                                         Column(
                                           children: <Widget>[
                                             Text("UPDATE",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     fontSize: 10,
                                                     color: Color.fromRGBO(
                                                         186, 196, 208, 0.91))),
@@ -648,7 +648,7 @@ class HomeDrawer extends StatelessWidget {
                                           ),
                                           Text(
                                             "Logout",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 color: Colors.white,
                                                 fontSize: 18),
                                           )

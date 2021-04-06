@@ -132,7 +132,7 @@ class _UploadDocState extends State<UploadDoc> {
                                   top: buildHeight(context) * 0.15),
                               child: Text(
                                 'Click here to Select Image',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontSize: 22, fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -169,7 +169,7 @@ class _UploadDocState extends State<UploadDoc> {
                             )
                           : Text(
                               'Upload',
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Colors.white, fontSize: 18),
                             ),
                     ),
@@ -177,7 +177,7 @@ class _UploadDocState extends State<UploadDoc> {
                 ),
                 buildSizedBox(buildHeight(context), 0.04),
                 // Text('3 lines KYC registration instructions.......',
-                //     style: GoogleFonts.poppins(
+                //     style: GoogleFonts.roboto(
                 //       color: Colors.black,
                 //     ))
               ],

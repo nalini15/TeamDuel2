@@ -24,10 +24,10 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
               Text(
                 "IND vs AUS",
                 textAlign: TextAlign.left,
-                style: GoogleFonts.poppins(fontSize: 14),
+                style: GoogleFonts.roboto(fontSize: 14),
               ),
               Text("STARTS IN 03H : 12M : 56s",
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontSize: 12, fontWeight: FontWeight.w300))
             ],
           ),
@@ -44,7 +44,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
               Text(
                 "Choose Captain, Vice-Captain & Player of the Match",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     color: const Color(0xffbb808080),
                     fontSize: 12,
                     fontWeight: FontWeight.bold),
@@ -56,7 +56,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                 "Captain will get 2x points, Vice-Captain will get 1.5x points & Player of the Match will get 50 points bonus",
                 textAlign: TextAlign.center,
                 maxLines: 2,
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     color: const Color(0xffbb808080),
                     fontSize: 12,
                     fontWeight: FontWeight.w400),
@@ -70,7 +70,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                   "Wicket Keeper",
                   textAlign: TextAlign.left,
                   maxLines: 2,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       color: const Color(0xffbb323232),
                       fontSize: 13,
                       fontWeight: FontWeight.w600),
@@ -112,7 +112,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                             Text(
                               "MS Dhoni",
                               textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: const Color(0xffbb323232),
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600),
@@ -121,7 +121,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                               "KXIP",
                               textAlign: TextAlign.left,
                               maxLines: 2,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: const Color(0xffbb808080),
                                   fontSize: 11,
                                   fontWeight: FontWeight.w600),
@@ -152,7 +152,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                   "Batsmen",
                   textAlign: TextAlign.left,
                   maxLines: 2,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       color: const Color(0xffbb323232),
                       fontSize: 13,
                       fontWeight: FontWeight.w600),
@@ -194,7 +194,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                             Text(
                               "MS Dhoni",
                               textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: const Color(0xffbb323232),
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600),
@@ -203,7 +203,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                               "KXIP",
                               textAlign: TextAlign.left,
                               maxLines: 2,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: const Color(0xffbb808080),
                                   fontSize: 11,
                                   fontWeight: FontWeight.w600),
@@ -234,7 +234,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                   "Bowler",
                   textAlign: TextAlign.left,
                   maxLines: 2,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       color: const Color(0xffbb323232),
                       fontSize: 13,
                       fontWeight: FontWeight.w600),
@@ -276,7 +276,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                             Text(
                               "MS Dhoni",
                               textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: const Color(0xffbb323232),
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600),
@@ -285,7 +285,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
                               "KXIP",
                               textAlign: TextAlign.left,
                               maxLines: 2,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: const Color(0xffbb808080),
                                   fontSize: 11,
                                   fontWeight: FontWeight.w600),
@@ -328,7 +328,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
           child: start == null
               ? Text(
                   "$posi",
-                  style: GoogleFonts.poppins(fontSize: 11, color: Colors.white),
+                  style: GoogleFonts.roboto(fontSize: 11, color: Colors.white),
                 )
               : Icon(
                   Icons.star,
@@ -338,7 +338,7 @@ class _PlayersLeaderBoardState extends State<PlayersLeaderBoard> {
         ),
         Text(
           "$per%",
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.roboto(
               fontSize: 10, color: const Color(0xffbb808080)),
         ),
       ],

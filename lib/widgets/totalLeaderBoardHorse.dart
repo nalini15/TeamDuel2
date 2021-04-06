@@ -28,19 +28,19 @@ class TotalLeaderBoardHorse extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Team Name',
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                  style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                 ),
                 Text(
                   'Rank',
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                  style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                 ),
                 Text(
                   'Score',
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                  style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                 ),
                 Text(
                   'Upcoming Score',
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                  style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                 ),
               ],
             ),

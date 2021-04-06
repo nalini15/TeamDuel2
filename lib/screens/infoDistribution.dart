@@ -17,7 +17,7 @@ class InfoDistribution extends StatelessWidget {
               itemBuilder: (con, i) => ListTile(
                     title: Text(
                       'From #${prize[i].from} To #${prize[i].to}',
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
@@ -25,7 +25,7 @@ class InfoDistribution extends StatelessWidget {
                     ),
                     trailing: Text(
                       '${prize[i].prize} ₹',
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   )),

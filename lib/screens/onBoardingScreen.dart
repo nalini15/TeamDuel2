@@ -62,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Text(
                           'Your mobile Fantasy Sports Platform',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
@@ -145,7 +145,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 },
                                 child: Text(
                                   'Get Started',
-                                  style: GoogleFonts.poppins(fontSize: 18),
+                                  style: GoogleFonts.roboto(fontSize: 18),
                                 ),
                               ),
                             ),
@@ -179,7 +179,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               'BE A WINNER',
               maxLines: 3,
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 20,
                   height: 1.5,
                   fontWeight: FontWeight.bold,
@@ -192,7 +192,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               '$msg',
               maxLines: 3,
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 16,
                   height: 1.5,
                   fontWeight: FontWeight.w400,

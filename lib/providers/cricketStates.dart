@@ -22,7 +22,7 @@ class CricketStates with ChangeNotifier {
       'screen': MatchScreen.horse,
       'isSelected': true,
       'icon': "assets/images/horse.png",
-      'title': 'Horse'
+      'title': 'Horse Racing'
     },
     {
       'screen': MatchScreen.cricket,
@@ -50,9 +50,9 @@ class CricketStates with ChangeNotifier {
   List<Map<String, dynamic>> cricketMatchups = [];
   List<Map<String, dynamic>> horseMatchups = [];
   List<Map<String, dynamic>> houndMatchups = [];
-  String selectedFilterCricket = "Filter";
-  String selectedFilterHorse = "Filter";
-  String selectedFilterHound = "Filter";
+  String selectedFilterCricket = "All";
+  String selectedFilterHorse = "All";
+  String selectedFilterHound = "All";
 
   //How to play section selection
   // 0 = prizeMoney

@@ -44,7 +44,7 @@ class _NativeAdState extends State<NativeAds> {
 
       case AdLoadState.loadCompleted:
         setState(() {
-          _height = 330;
+          _height = 230;
         });
         break;
 

@@ -69,7 +69,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                     Text(
                       'Up Coming ',
                       textAlign: TextAlign.left,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.roboto(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     Spacer(),
@@ -90,7 +90,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                   children: <Widget>[
                                     Text(
                                       'Joined Leagues:',
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           color: Colors.blue,
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold),
@@ -154,7 +154,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                         Text(
                                           '${items.contestName}',
                                           textAlign: TextAlign.left,
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                             color:
                                                 Theme.of(context).primaryColor,
                                             fontSize: 15,
@@ -178,7 +178,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                         children: [
                                           Text(
                                             'Ends In: ',
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 color: Colors.red,
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.bold),
@@ -195,7 +195,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                           //   defaultHours: "**",
                                           //   defaultMin: "**",
                                           //   defaultSec: "**",
-                                          //   textStyle: GoogleFonts.poppins(
+                                          //   textStyle: GoogleFonts.roboto(
                                           //       color: Colors.red,
                                           //       fontSize: 15),
                                           // )
@@ -257,7 +257,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                     //     children: [
                                     //       Text(
                                     //         'Ends In: ',
-                                    //         style: GoogleFonts.poppins(
+                                    //         style: GoogleFonts.roboto(
                                     //             color: Colors.red,
                                     //             fontSize: 15,
                                     //             fontWeight: FontWeight.bold),
@@ -274,7 +274,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                     //         defaultHours: "**",
                                     //         defaultMin: "**",
                                     //         defaultSec: "**",
-                                    //         textStyle: GoogleFonts.poppins(
+                                    //         textStyle: GoogleFonts.roboto(
                                     //             color: Colors.red,
                                     //             fontSize: 15),
                                     //       )
@@ -320,7 +320,7 @@ class _HorseGrandLeagueState extends State<HorseGrandLeague> {
                                               },
                                               child: Text(
                                                 'Join Contest',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.roboto(
                                                     color: Colors.white),
                                               )),
                                         ),

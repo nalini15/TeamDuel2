@@ -50,7 +50,7 @@ class _MatchWiseTicketDetailState extends State<MatchWiseTicketDetail> {
                               filled: true,
                               fillColor: Colors.white,
                               errorStyle:
-                                  GoogleFonts.poppins(color: Colors.yellow),
+                                  GoogleFonts.roboto(color: Colors.yellow),
                             ),
                             items: listUserType.map((map) {
                               return DropdownMenuItem(
@@ -63,7 +63,7 @@ class _MatchWiseTicketDetailState extends State<MatchWiseTicketDetail> {
                         child: Text(
                           'Total Score: 450 PTS\nStable: 1',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(height: 1.5, fontSize: 15),
+                          style: GoogleFonts.roboto(height: 1.5, fontSize: 15),
                         ))
                   ])),
           buildSizedBox(buildHeight(context), 0.02),
@@ -99,43 +99,33 @@ class _MatchWiseTicketDetailState extends State<MatchWiseTicketDetail> {
                                                   children: <Widget>[
                                                     Text(
                                                       'H.No',
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                      style: GoogleFonts.roboto(
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
                                                     Text(
                                                       'H Name',
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                      style: GoogleFonts.roboto(
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
                                                     Text(
                                                       'Result',
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                      style: GoogleFonts.roboto(
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
                                                     Text(
                                                       'Sel.Time',
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                      style: GoogleFonts.roboto(
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
                                                     Text(
                                                       'Score',
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                      style: GoogleFonts.roboto(
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
                                                   ],
                                                 ),

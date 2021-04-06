@@ -28,20 +28,20 @@ class _LeaderBoradMegaContestState extends State<LeaderBoradMegaContest>
       appBar: AppBar(
         title: Text(
           widget.appBarTitle,
-          style: GoogleFonts.poppins(fontSize: 15),
+          style: GoogleFonts.roboto(fontSize: 15),
         ),
         bottom: TabBar(
           tabs: [
             Tab(
               child: Text(
                 "Total",
-                style: GoogleFonts.poppins(fontSize: 15),
+                style: GoogleFonts.roboto(fontSize: 15),
               ),
             ),
             Tab(
               child: Text(
                 "Match Wise",
-                style: GoogleFonts.poppins(fontSize: 15),
+                style: GoogleFonts.roboto(fontSize: 15),
               ),
             ),
           ],

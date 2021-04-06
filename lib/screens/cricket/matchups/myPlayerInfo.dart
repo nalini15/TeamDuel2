@@ -33,7 +33,7 @@ class _MyPlayerInfoState extends State<MyPlayerInfo> {
             children: <Widget>[
               Text(
                 "Player Info",
-                style: GoogleFonts.poppins(color: Colors.white),
+                style: GoogleFonts.roboto(color: Colors.white),
               ),
             ],
           ),
@@ -60,7 +60,7 @@ class _MyPlayerInfoState extends State<MyPlayerInfo> {
                           child: Center(
                             child: Text(
                               "No Data Available",
-                              style: GoogleFonts.poppins(color: Colors.white),
+                              style: GoogleFonts.roboto(color: Colors.white),
                             ),
                           ),
                         )
@@ -88,14 +88,14 @@ class _MyPlayerInfoState extends State<MyPlayerInfo> {
                                       children: <Widget>[
                                         Text(
                                           "${matchup.playerInfo[0].playerName}",
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               color: Colors.white,
                                               fontSize: 16,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
                                             "${matchup.playerInfo[0].total} PTS",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 color: Colors.white,
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w300)),
@@ -268,7 +268,7 @@ class _MyPlayerInfoState extends State<MyPlayerInfo> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Text("$title",
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.roboto(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
     );
   }
@@ -296,14 +296,14 @@ class _MyPlayerInfoState extends State<MyPlayerInfo> {
       children: <Widget>[
         Text(
           "$text1",
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.roboto(
               color: Colors.white,
               fontSize: 14,
               fontWeight: isLast != null ? FontWeight.w600 : FontWeight.normal),
         ),
         Text(
           "$text2",
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.roboto(
               color: Colors.white,
               fontSize: 14,
               fontWeight: isLast != null ? FontWeight.w600 : FontWeight.normal),

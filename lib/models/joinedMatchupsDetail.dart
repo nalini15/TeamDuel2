@@ -67,7 +67,7 @@ class Data {
     raceDetails = json['race_details'] != null
         ? new RaceDetails.fromJson(json['race_details'])
         : null;
-    matchid = json['matchid'];
+    matchid = json['matchid'].toString();
     matchDetails = json['match_details'] != null
         ? new MatchDetails.fromJson(json['match_details'])
         : null;
@@ -138,9 +138,9 @@ class MatchupOne {
     winner = json['winner'];
     score = json['score'].toString();
     playerId = json['player_id'].toString();
-    playerName = json['player_name'];
-    playerTeamName = json['player_team_name'];
-    playerRole = json['player_role'];
+    playerName = json['player_name'].toString();
+    playerTeamName = json['player_team_name'].toString();
+    playerRole = json['player_role'].toString();
     jersy = json['jersy'].toString();
     points = json['points'].toString();
   }

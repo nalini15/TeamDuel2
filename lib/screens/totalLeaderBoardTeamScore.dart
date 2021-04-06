@@ -47,7 +47,7 @@ class _TotalLeaderBoardTeamScoreState extends State<TotalLeaderBoardTeamScore> {
                     backgroundColor: Colors.transparent,
                     child: Text(
                       '$i',
-                      style: GoogleFonts.poppins(color: Colors.black),
+                      style: GoogleFonts.roboto(color: Colors.black),
                     ),
                   ),
                   buildSizedBoxWidth(buildWidth(context), 0.02),

@@ -43,7 +43,7 @@ class Completed extends StatelessWidget {
                     child: OutlineButton(
                   child: Text(
                     "League Info",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontSize: 14, color: AppColors.mainColor),
                   ),
                   shape: RoundedRectangleBorder(
@@ -82,7 +82,7 @@ class Completed extends StatelessWidget {
                         child: Text(
                           'VIEW WINNERS',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
                               fontSize: 11,
                               color: Colors.white),
@@ -121,7 +121,7 @@ class Completed extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "You won",
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 12),
+                  style: GoogleFonts.roboto(color: Colors.white, fontSize: 12),
                 ),
                 SizedBox(
                   width: 10,
@@ -135,7 +135,7 @@ class Completed extends StatelessWidget {
                 ),
                 Text("2000",
                     style:
-                        GoogleFonts.poppins(color: Colors.white, fontSize: 12)),
+                        GoogleFonts.roboto(color: Colors.white, fontSize: 12)),
               ],
             ),
           )

@@ -255,7 +255,7 @@ class _EditUserState extends State<EditUser> {
                         userEdit['email'] = value.trim();
                       },
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       decoration: InputDecoration(
                         fillColor: AppColors.mainColorLight,
                         filled: true,
@@ -273,7 +273,7 @@ class _EditUserState extends State<EditUser> {
                     TextFormField(
                       onTap: _presentDatePicker,
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       readOnly: true,
                       // initialValue: user.userDetails[0].dob,
                       showCursor: false,
@@ -407,7 +407,7 @@ class _EditUserState extends State<EditUser> {
                     TextFormField(
                       readOnly: true,
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       initialValue: widget.country,
                       validator: (val) {
                         val = val.trim();
@@ -453,7 +453,7 @@ class _EditUserState extends State<EditUser> {
                         userEdit['state'] = val.trim();
                       },
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       decoration: InputDecoration(
                         fillColor: AppColors.mainColorLight,
                         filled: true,
@@ -484,7 +484,7 @@ class _EditUserState extends State<EditUser> {
                                   borderRadius: BorderRadius.circular(5)),
                               child: Text(
                                 'Update',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 18),
                               ),
                             ),

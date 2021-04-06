@@ -86,7 +86,7 @@ class _MyHorseGrandLeagueContestState extends State<MyHorseGrandLeagueContest> {
                                               '${items.contestName}',
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.roboto(
                                                 color: Theme.of(context)
                                                     .primaryColor,
                                                 fontSize: 18,
@@ -137,10 +137,8 @@ class _MyHorseGrandLeagueContestState extends State<MyHorseGrandLeagueContest> {
                                                     child: Text(
                                                       '${items.prizeBreakUp[0].prize} R to 1st',
                                                       textAlign: TextAlign.left,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              color:
-                                                                  Colors.white),
+                                                      style: GoogleFonts.roboto(
+                                                          color: Colors.white),
                                                     ),
                                                   ),
                                                 ],
@@ -215,7 +213,7 @@ class _MyHorseGrandLeagueContestState extends State<MyHorseGrandLeagueContest> {
                                           children: [
                                             Text(
                                               'Ends In: ',
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.roboto(
                                                   color: Colors.red,
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.bold),
@@ -232,7 +230,7 @@ class _MyHorseGrandLeagueContestState extends State<MyHorseGrandLeagueContest> {
                                             //   defaultHours: "**",
                                             //   defaultMin: "**",
                                             //   defaultSec: "**",
-                                            //   textStyle: GoogleFonts.poppins(
+                                            //   textStyle: GoogleFonts.roboto(
                                             //       color: Colors.red,
                                             //       fontSize: 15),
                                             // )

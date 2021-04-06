@@ -39,19 +39,19 @@ class _RaceMeetsState extends State<RaceMeets> with TickerProviderStateMixin {
                 Tab(
                   child: Text(
                     "Matches",
-                    style: GoogleFonts.poppins(fontSize: 15),
+                    style: GoogleFonts.roboto(fontSize: 15),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "Joined Matches",
-                    style: GoogleFonts.poppins(fontSize: 12),
+                    style: GoogleFonts.roboto(fontSize: 12),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "Race List",
-                    style: GoogleFonts.poppins(fontSize: 15),
+                    style: GoogleFonts.roboto(fontSize: 15),
                   ),
                 ),
               ],

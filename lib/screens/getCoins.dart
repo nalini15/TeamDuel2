@@ -112,7 +112,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
         backgroundColor: AppColors.mainColor,
         title: Text(
           "Get More Coins",
-          style: GoogleFonts.poppins(color: Colors.white),
+          style: GoogleFonts.roboto(color: Colors.white),
         ),
       ),
       body: Container(
@@ -203,7 +203,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text("Refer your friends ",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontWeight: FontWeight.w700,
                                     color: Colors.white)),
                             Row(
@@ -211,7 +211,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                               children: [
                                 Text(
                                   "+ 50 ",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white),
                                 ),
@@ -225,7 +225,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                               ],
                             ),
                             Text("(Both Get Get Free Coins)",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontSize: 10,
                                     color: Color.fromRGBO(255, 255, 255, 0.7))),
                             SizedBox(
@@ -237,13 +237,13 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                                 Column(
                                   children: [
                                     Text("Referal Code",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 10,
                                             color: Color.fromRGBO(
                                                 255, 255, 255, 0.7))),
                                     Text("${user.userDetails[0].team_name}",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontWeight: FontWeight.w700,
                                             fontSize: 10,
                                             color: Color.fromRGBO(
@@ -296,7 +296,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                     children: [
                       Text(
                         "Do you Have Bonus Code ?",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             color: Color.fromRGBO(255, 255, 255, 0.7)),
                       ),
                       Container(
@@ -311,7 +311,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                           children: [
                             Text(
                               "8S6M2VKYOR",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Colors.white, fontSize: 12),
                             ),
                             Container(
@@ -323,7 +323,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                                   color: AppColors.buttonColor),
                               child: Text(
                                 "Claim",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 12),
                               ),
                             )
@@ -357,7 +357,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                         ),
                         Text(
                           "Convert Coins",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               color: Colors.white, fontSize: 12),
                         ),
                       ],
@@ -384,7 +384,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
             children: [
               Text(
                 "$title ",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
                     color: Colors.white),
@@ -419,7 +419,7 @@ class _GetCoinsChipsState extends State<GetCoinsChips> {
                     : Color.fromRGBO(136, 99, 211, 1)),
             child: Text(
               "$descp",
-              style: GoogleFonts.poppins(color: Colors.white, fontSize: 12),
+              style: GoogleFonts.roboto(color: Colors.white, fontSize: 12),
             ),
           )
         ],

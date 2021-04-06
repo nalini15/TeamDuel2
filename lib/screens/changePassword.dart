@@ -72,7 +72,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                 height: buildHeight(context) * 0.30,
                 alignment: Alignment.center,
                 child: Text('Reset Password Image',
-                    style: GoogleFonts.poppins(fontSize: 28)),
+                    style: GoogleFonts.roboto(fontSize: 28)),
               ),
               buildSizedBox(buildHeight(context), 0.05),
               Form(
@@ -204,7 +204,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                                     borderRadius: BorderRadius.circular(30)),
                                 child: Text(
                                   'Reset Password',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: Colors.white, fontSize: 18),
                                 ),
                               ),

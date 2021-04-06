@@ -9,8 +9,10 @@ import 'package:provider/provider.dart';
 import 'package:winx/config/colors.dart';
 import 'package:winx/functions/cricket/megaleagues/widgetFunctions.dart';
 import 'package:winx/functions/widgetFunc.dart';
+import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/cricketStates.dart';
 import 'package:winx/providers/matchUps.dart';
+import 'package:winx/screens/getCoins.dart';
 import 'package:winx/services/admob_services.dart';
 import 'package:winx/widgets/cricket/matchups/adBanner.dart';
 import 'package:winx/widgets/cricket/matchups/nativeAds.dart';
@@ -127,16 +129,16 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                           // SizedBox(
                           //   width: 19,
                           // ),
-                          Text(
-                            "Select  ( min 4 - Max 15) match-up to play",
-                            style: GoogleFonts.poppins(
-                                fontSize: 10, color: Colors.white),
-                          ),
+                          // Text(
+                          //   "Select  ( min 4 - Max 15) match-up to play",
+                          //   style: GoogleFonts.roboto(
+                          //       fontSize: 10, color: Colors.white),
+                          // ),
                           Consumer<MatchupsCrickets>(
                             builder: (con, filter, _) {
                               if (filter.getHorseMatchesLocation.isNotEmpty) {
                                 if (states.selectedFilterHorse.isEmpty) {
-                                  states.selectedFilterHorse = "Filter";
+                                  states.selectedFilterHorse = "All";
                                 } else {
                                   states.selectedFilterHorse =
                                       states.selectedFilterHorse;
@@ -193,7 +195,7 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                                       title: Text(
                                                         "${filter.horseMatchesLocation[i].locations}",
                                                         style:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.roboto(
                                                                 color: Colors
                                                                     .white),
                                                         textAlign:
@@ -216,14 +218,15 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                           "assets/images/filter.png",
                                           width: 12,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "${states.selectedFilterHorse.isEmpty ? "All" : states.selectedFilterHorse}",
-                                            textAlign: TextAlign.center,
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 12,
-                                                color: Colors.white),
-                                          ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          "${states.selectedFilterHorse.isEmpty ? "All" : states.selectedFilterHorse}",
+                                          textAlign: TextAlign.center,
+                                          style: GoogleFonts.roboto(
+                                              fontSize: 12,
+                                              color: Colors.white),
                                         ),
                                       ],
                                     ),
@@ -257,7 +260,28 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                       height: 15,
                     ),
                     state.horseMatchups.isEmpty
-                        ? noMatchups(context)
+                        ? Column(
+                            children: [
+                              noMatchups(context),
+                              Column(
+                                children: [
+                                  NativeAds(
+                                    nativekey: ams.getNativeAdId(),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                            DownSlideNavigation(
+                                                widget: GetCoinsChips()));
+                                      },
+                                      child: watchNWin())
+                                ],
+                              )
+                            ],
+                          )
                         : Column(
                             children: List.generate(state.horseMatchups.length,
                                 (index) {
@@ -277,14 +301,13 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                 time = 'ended';
                               } else {
                                 if (remaining > 60) {
-                                  remaining =
-                                      date.difference(DateTime.now()).inHours;
+                                  remaining = 0;
                                   time = 'hr';
                                 }
                               }
                               return Column(
                                 children: <Widget>[
-                                  state.horseMatchups.length <= 3
+                                  state.horseMatchups.length == index - 1
                                       ? NativeAds(
                                           nativekey: ams.getNativeAdId(),
                                         )
@@ -297,7 +320,7 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                         children: <Widget>[
                                           Text(
                                             "${state.horseMatchups[index].raceName}",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.roboto(
                                                 color: Colors.white),
                                           ),
                                           // buildSizedBoxWidth(buildWidth(context), 0.05),
@@ -310,8 +333,8 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
                                             child: Text(
-                                              "$remaining $time",
-                                              style: GoogleFonts.poppins(
+                                              "${date.difference(DateTime.now()).inHours == 0 ? "" : date.difference(DateTime.now()).inHours}${date.difference(DateTime.now()).inHours != 0 ? ":" : ""}$remaining min",
+                                              style: GoogleFonts.roboto(
                                                 fontSize: 13,
                                                 fontWeight: FontWeight.w500,
                                                 color: Colors.black,
@@ -360,27 +383,6 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                               }
                                               return Column(
                                                 children: [
-                                                  i != 0 && i % 3 == 0
-                                                      ? Container(
-                                                          height: 75,
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              double.infinity,
-                                                          color: Colors.black,
-                                                          padding: EdgeInsets
-                                                              .symmetric(
-                                                                  horizontal:
-                                                                      10,
-                                                                  vertical: 10),
-                                                          child: AdBanner(
-                                                            stringKey: ams
-                                                                .getBannerAppId(),
-                                                            size:
-                                                                AdmobBannerSize
-                                                                    .BANNER,
-                                                          ))
-                                                      : Container(),
                                                   Container(
                                                     margin: EdgeInsets.only(
                                                         bottom: 10),
@@ -450,6 +452,8 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                                                       .trainer,
                                                                   isRight:
                                                                       false,
+                                                                  isHound:
+                                                                      false,
                                                                 )),
                                                           ),
                                                           SizedBox(
@@ -487,7 +491,7 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                                                   )
                                                                 : Text(
                                                                     "VS",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.roboto(
                                                                         fontSize:
                                                                             12,
                                                                         color: Colors
@@ -547,12 +551,26 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                                                   trainer: matchup2
                                                                       .trainer,
                                                                   isRight: true,
+                                                                  isHound:
+                                                                      false,
                                                                 )),
                                                           ),
                                                         ],
                                                       ),
                                                     ),
                                                   ),
+                                                  i ==
+                                                          state
+                                                                  .horseMatchups[
+                                                                      index]
+                                                                  .matchups
+                                                                  .length -
+                                                              1
+                                                      ? NativeAds(
+                                                          nativekey: ams
+                                                              .getNativeAdId(),
+                                                        )
+                                                      : Container(),
                                                 ],
                                               );
                                             }),
@@ -562,9 +580,13 @@ class _HorseMatchUpLobbyState extends State<HorseMatchUpLobby> {
                                     ),
                                   ),
                                   index == state.horseMatchups.length - 1
-                                      ? SizedBox(
-                                          height: 100,
-                                        )
+                                      ? GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                DownSlideNavigation(
+                                                    widget: GetCoinsChips()));
+                                          },
+                                          child: watchNWin())
                                       : Container()
                                 ],
                               );

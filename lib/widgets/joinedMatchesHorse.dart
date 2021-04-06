@@ -102,7 +102,7 @@ class _JoinedMatchesState extends State<JoinedMatches> {
                                         Text(
                                           'Track Meet : ${items.matchTitle}',
                                           textAlign: TextAlign.left,
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Spacer(),
@@ -135,7 +135,7 @@ class _JoinedMatchesState extends State<JoinedMatches> {
                                               children: <Widget>[
                                                 Text(
                                                   '${items.matchDestination}',
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.roboto(
                                                       fontSize: 14,
                                                       fontWeight:
                                                           FontWeight.w400),
@@ -148,13 +148,11 @@ class _JoinedMatchesState extends State<JoinedMatches> {
                                                   children: [
                                                     Text(
                                                       'Ends In: ',
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              color: Colors.red,
-                                                              fontSize: 15,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                      style: GoogleFonts.roboto(
+                                                          color: Colors.red,
+                                                          fontSize: 15,
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
                                                     buildSizedBoxWidth(
                                                         buildWidth(context),
@@ -171,7 +169,7 @@ class _JoinedMatchesState extends State<JoinedMatches> {
                                                     //   defaultMin: "**",
                                                     //   defaultSec: "**",
                                                     //   textStyle:
-                                                    //       GoogleFonts.poppins(
+                                                    //       GoogleFonts.roboto(
                                                     //           color: Colors.red,
                                                     //           fontSize: 15),
                                                     // )
@@ -227,7 +225,7 @@ class _JoinedMatchesState extends State<JoinedMatches> {
                                                     buildWidth(context), 0.02),
                                                 Text(
                                                   '${items.userJointTickets}/ ${items.userAllowedTickets}',
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.roboto(
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 ),

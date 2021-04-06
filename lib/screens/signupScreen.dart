@@ -35,7 +35,6 @@ class _SingUpState extends State<SingUp> {
     'refer_id': '',
     'pincode': '',
     'state': '',
-    'team_name': ''
   };
   String confirmPass = '';
   bool loading = false;
@@ -47,7 +46,7 @@ class _SingUpState extends State<SingUp> {
       content: Text(
         stringList,
         textAlign: TextAlign.center,
-        style: GoogleFonts.poppins(
+        style: GoogleFonts.roboto(
             fontSize: 13.0, fontWeight: FontWeight.bold, color: Colors.red),
       ),
       duration: Duration(seconds: 2),
@@ -156,7 +155,7 @@ class _SingUpState extends State<SingUp> {
                             ),
                             Text(
                               "100 Welcome Bonus for New User",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   color: Color.fromRGBO(255, 255, 255, 0.7),
                                   fontSize: 18),
                             )
@@ -177,7 +176,7 @@ class _SingUpState extends State<SingUp> {
                       onSaved: (val) {
                         userData['name'] = val.trim();
                       },
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       decoration: InputDecoration(
                         fillColor: AppColors.mainColorLight,
                         filled: true,
@@ -187,7 +186,7 @@ class _SingUpState extends State<SingUp> {
                           color: Colors.white,
                         ),
                         hintText: 'Your Name',
-                        hintStyle: GoogleFonts.poppins(
+                        hintStyle: GoogleFonts.roboto(
                             color: Colors.white, fontSize: 12),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(0),
@@ -204,7 +203,7 @@ class _SingUpState extends State<SingUp> {
                       autocorrect: true,
                       keyboardType: TextInputType.emailAddress,
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       cursorRadius: Radius.circular(10),
                       validator: (value) {
                         value = value.trim();
@@ -231,7 +230,7 @@ class _SingUpState extends State<SingUp> {
                           color: Colors.white,
                         ),
                         hintText: 'Email / Mobile No.',
-                        hintStyle: GoogleFonts.poppins(
+                        hintStyle: GoogleFonts.roboto(
                             color: Colors.white, fontSize: 12),
                         focusedBorder: buildOutlineInputBorder(),
                         border: buildOutlineInputBorder(),
@@ -261,7 +260,7 @@ class _SingUpState extends State<SingUp> {
                             Expanded(
                                 child: Text(
                               country.name,
-                              style: GoogleFonts.poppins(color: Colors.grey),
+                              style: GoogleFonts.roboto(color: Colors.grey),
                             )),
                           ],
                         );
@@ -273,7 +272,7 @@ class _SingUpState extends State<SingUp> {
                     ),
                     buildSizedBox(buildHeight(context), 0.03),
                     TextFormField(
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       onTap: _presentDatePicker,
                       validator: (val) {
                         val = val.trim();
@@ -298,7 +297,7 @@ class _SingUpState extends State<SingUp> {
                           color: Colors.white,
                         ),
                         hintText: 'Date of birth',
-                        hintStyle: GoogleFonts.poppins(
+                        hintStyle: GoogleFonts.roboto(
                             color: Colors.white, fontSize: 12),
                         fillColor: AppColors.mainColorLight,
                         filled: true,
@@ -321,7 +320,7 @@ class _SingUpState extends State<SingUp> {
                       onSaved: (val) {
                         userData['password'] = val.trim();
                       },
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       decoration: InputDecoration(
                         fillColor: AppColors.mainColorLight,
                         filled: true,
@@ -337,7 +336,7 @@ class _SingUpState extends State<SingUp> {
                               color: Colors.white,
                             )),
                         hintText: 'Password',
-                        hintStyle: GoogleFonts.poppins(
+                        hintStyle: GoogleFonts.roboto(
                             color: Colors.white, fontSize: 12),
                         focusedBorder: buildOutlineInputBorder(),
                         border: buildOutlineInputBorder(),
@@ -348,7 +347,7 @@ class _SingUpState extends State<SingUp> {
                       obscureText: _confirmPassword,
                       keyboardType: TextInputType.text,
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       cursorRadius: Radius.circular(10),
                       validator: (val) {
                         val = val.trim();
@@ -374,7 +373,7 @@ class _SingUpState extends State<SingUp> {
                               color: Colors.white,
                             )),
                         hintText: 'Confirm Password',
-                        hintStyle: GoogleFonts.poppins(
+                        hintStyle: GoogleFonts.roboto(
                             color: Colors.white, fontSize: 12),
                         focusedBorder: buildOutlineInputBorder(),
                         border: buildOutlineInputBorder(),
@@ -386,7 +385,7 @@ class _SingUpState extends State<SingUp> {
                       keyboardType: TextInputType.number,
                       cursorColor: Colors.white,
                       cursorRadius: Radius.circular(10),
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       validator: (val) {
                         val = val.trim();
                         if (val.isEmpty || val.length <= 3) {
@@ -405,7 +404,7 @@ class _SingUpState extends State<SingUp> {
                             color: Colors.white,
                           ),
                           hintText: 'Pincode',
-                          hintStyle: GoogleFonts.poppins(
+                          hintStyle: GoogleFonts.roboto(
                               color: Colors.white, fontSize: 12),
                           focusedBorder: buildOutlineInputBorder(),
                           border: buildOutlineInputBorder()),
@@ -415,7 +414,7 @@ class _SingUpState extends State<SingUp> {
                       autocorrect: true,
                       keyboardType: TextInputType.text,
                       cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
+                      style: GoogleFonts.roboto(color: Colors.white),
                       cursorRadius: Radius.circular(10),
                       validator: (val) {
                         val = val.trimLeft().trimRight();
@@ -435,49 +434,49 @@ class _SingUpState extends State<SingUp> {
                             color: Colors.white,
                           ),
                           hintText: 'State',
-                          hintStyle: GoogleFonts.poppins(
+                          hintStyle: GoogleFonts.roboto(
                               color: Colors.white, fontSize: 12),
                           focusedBorder: buildOutlineInputBorder(),
                           border: buildOutlineInputBorder()),
                     ),
                     buildSizedBox(buildHeight(context), 0.03),
-                    TextFormField(
-                      autocorrect: true,
-                      keyboardType: TextInputType.text,
-                      cursorColor: Colors.white,
-                      style: GoogleFonts.poppins(color: Colors.white),
-                      cursorRadius: Radius.circular(10),
-                      validator: (val) {
-                        val = val.trimLeft().trimRight();
-                        if (val.isEmpty) {
-                          return 'Please provide your team name';
-                        }
-                      },
-                      onSaved: (val) {
-                        userData['team_name'] = val;
-                      },
-                      decoration: InputDecoration(
-                          fillColor: AppColors.mainColorLight,
-                          filled: true,
-                          contentPadding: EdgeInsets.symmetric(vertical: 15),
-                          prefixIcon: Icon(
-                            FontAwesomeIcons.users,
-                            color: Colors.white,
-                          ),
-                          hintText: 'Team Name',
-                          hintStyle: GoogleFonts.poppins(
-                              color: Colors.white, fontSize: 12),
-                          focusedBorder: buildOutlineInputBorder(),
-                          border: buildOutlineInputBorder()),
-                    ),
-                    buildSizedBox(buildHeight(context), 0.03),
+                    // TextFormField(
+                    //   autocorrect: true,
+                    //   keyboardType: TextInputType.text,
+                    //   cursorColor: Colors.white,
+                    //   style: GoogleFonts.roboto(color: Colors.white),
+                    //   cursorRadius: Radius.circular(10),
+                    //   validator: (val) {
+                    //     val = val.trimLeft().trimRight();
+                    //     if (val.isEmpty) {
+                    //       return 'Please provide your team name';
+                    //     }
+                    //   },
+                    //   onSaved: (val) {
+                    //     userData['team_name'] = val;
+                    //   },
+                    //   decoration: InputDecoration(
+                    //       fillColor: AppColors.mainColorLight,
+                    //       filled: true,
+                    //       contentPadding: EdgeInsets.symmetric(vertical: 15),
+                    //       prefixIcon: Icon(
+                    //         FontAwesomeIcons.users,
+                    //         color: Colors.white,
+                    //       ),
+                    //       hintText: 'Team Name',
+                    //       hintStyle: GoogleFonts.roboto(
+                    //           color: Colors.white, fontSize: 12),
+                    //       focusedBorder: buildOutlineInputBorder(),
+                    //       border: buildOutlineInputBorder()),
+                    // ),
+                    // buildSizedBox(buildHeight(context), 0.03),
                     Container(
                       height: referCode ? null : 0,
                       child: AnimatedOpacity(
                         opacity: referCode ? 1 : 0,
                         duration: Duration(seconds: 1),
                         child: TextFormField(
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.roboto(color: Colors.white),
                           autocorrect: true,
                           keyboardType: TextInputType.text,
                           cursorColor: Colors.white,
@@ -492,7 +491,7 @@ class _SingUpState extends State<SingUp> {
                                 color: Colors.white,
                               ),
                               hintText: 'Refer Code',
-                              hintStyle: GoogleFonts.poppins(
+                              hintStyle: GoogleFonts.roboto(
                                   color: Colors.white, fontSize: 12),
                               focusedBorder: buildOutlineInputBorder(),
                               border: buildOutlineInputBorder()),
@@ -512,7 +511,7 @@ class _SingUpState extends State<SingUp> {
                         },
                         child: Text(
                           'Apply Refer Code ?',
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               color: Color.fromRGBO(16, 119, 194, 1),
                               fontWeight: FontWeight.bold,
                               fontSize: 15),
@@ -536,7 +535,7 @@ class _SingUpState extends State<SingUp> {
                                   borderRadius: BorderRadius.circular(0)),
                               child: Text(
                                 'Register',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 18),
                               ),
                             ),

@@ -34,18 +34,18 @@ class _MegaLeagueMatchesState extends State<MegaLeagueMatches>
             Tab(
                 child: Text(
               "Upcoming",
-              style: GoogleFonts.poppins(),
+              style: GoogleFonts.roboto(),
             )),
             Tab(
               child: Text(
                 "Joined",
-                style: GoogleFonts.poppins(),
+                style: GoogleFonts.roboto(),
               ),
             ),
             Tab(
               child: Text(
                 "Completed",
-                style: GoogleFonts.poppins(),
+                style: GoogleFonts.roboto(),
               ),
             ),
           ],

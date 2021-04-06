@@ -1,3 +1,4 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,6 +12,7 @@ import 'package:winx/navigatorAnimation/bouncinganagivation.dart';
 import 'package:winx/providers/matchUps.dart';
 import 'package:winx/screens/cricket/matchups/myMatchUps.dart';
 import 'package:winx/services/admob_services.dart';
+import 'package:winx/widgets/cricket/matchups/nativeAds.dart';
 
 class MatchUpJoined extends StatefulWidget {
   MatchUpJoined({Key key}) : super(key: key);
@@ -100,202 +102,255 @@ class _MatchUpJoinedState extends State<MatchUpJoined> {
                           jointed.joinedMatchups.length,
                           (index) {
                             var data = jointed.joinedMatchups[index];
-                            return GestureDetector(
-                              onTap: () async {
-                                SharedPreferences sharedPreferences =
-                                    await SharedPreferences.getInstance();
-                                if (sharedPreferences
-                                    .containsKey("joinedAdd")) {
-                                  int counter =
-                                      sharedPreferences.getInt("joinedAdd");
-                                  if (counter == 4) {
-                                    sharedPreferences.setInt(
-                                        "joinedAdd", counter + 1);
-                                    addIni(data);
-                                  } else {
-                                    sharedPreferences.setInt(
-                                        "joinedAdd", counter + 1);
-                                    Navigator.push(
-                                        context,
-                                        SlideNavigation(
-                                            widget: MyMatchUps(
-                                          matchupId: data.matchupId.toString(),
-                                        )));
-                                  }
-                                } else {
-                                  sharedPreferences.setInt("joinedAdd", 1);
-                                  Navigator.push(
-                                      context,
-                                      SlideNavigation(
-                                          widget: MyMatchUps(
-                                        matchupId: data.matchupId.toString(),
-                                      )));
-                                }
-                              },
-                              child: Container(
-                                margin: EdgeInsets.only(
-                                    bottom: 20, right: 16, left: 16),
-                                // padding: EdgeInsets.only(right: 28, left: 22, top: 19),
-                                width: double.infinity,
-                                height: 172,
-                                decoration: BoxDecoration(
-                                    color: AppColors.mainColorLight,
-                                    borderRadius: BorderRadius.circular(8)),
-                                child: Column(
-                                  children: <Widget>[
-                                    Container(
-                                      padding: EdgeInsets.only(
-                                          right: 28, left: 22, top: 19),
-                                      child: Row(
-                                        children: <Widget>[
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                            return Column(
+                              children: [
+                                index == 0
+                                    ? Container(
+                                        height: 75,
+                                        alignment: Alignment.center,
+                                        margin: EdgeInsets.only(bottom: 10),
+                                        width: double.infinity,
+                                        color: Colors.black,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10, vertical: 10),
+                                        child: AdmobBanner(
+                                          adUnitId: ams.getBannerAppId(),
+                                          adSize: AdmobBannerSize.FULL_BANNER,
+                                        ),
+                                      )
+                                    : Container(),
+                                jointed.joinedMatchups.length == index - 1
+                                    ? NativeAds(
+                                        nativekey: ams.getNativeAdId(),
+                                      )
+                                    : Container(),
+                                GestureDetector(
+                                  onTap: () async {
+                                    SharedPreferences sharedPreferences =
+                                        await SharedPreferences.getInstance();
+                                    if (sharedPreferences
+                                        .containsKey("joinedAdd")) {
+                                      int counter =
+                                          sharedPreferences.getInt("joinedAdd");
+                                      if (counter == 4) {
+                                        sharedPreferences.setInt(
+                                            "joinedAdd", counter + 1);
+                                        addIni(data);
+                                      } else {
+                                        sharedPreferences.setInt(
+                                            "joinedAdd", counter + 1);
+                                        Navigator.push(
+                                            context,
+                                            SlideNavigation(
+                                                widget: MyMatchUps(
+                                              matchupId:
+                                                  data.matchupId.toString(),
+                                            )));
+                                      }
+                                    } else {
+                                      sharedPreferences.setInt("joinedAdd", 1);
+                                      Navigator.push(
+                                          context,
+                                          SlideNavigation(
+                                              widget: MyMatchUps(
+                                            matchupId:
+                                                data.matchupId.toString(),
+                                          )));
+                                    }
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: 20, right: 16, left: 16),
+                                    // padding: EdgeInsets.only(right: 28, left: 22, top: 19),
+                                    width: double.infinity,
+                                    height: 172,
+                                    decoration: BoxDecoration(
+                                        color: AppColors.mainColorLight,
+                                        borderRadius: BorderRadius.circular(8)),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Container(
+                                          padding: EdgeInsets.only(
+                                              right: 28, left: 22, top: 19),
+                                          child: Row(
                                             children: <Widget>[
-                                              Text(
-                                                "#${data.registerId}",
-                                                style: GoogleFonts.poppins(
-                                                    color: Colors.white,
-                                                    fontSize: 15,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                              Text(
-                                                "${data.matchupDate}",
-                                                style: GoogleFonts.poppins(
-                                                    color: Colors.white,
-                                                    fontSize: 12,
-                                                    fontWeight:
-                                                        FontWeight.w300),
-                                              ),
-                                              Text(
-                                                "${data.matchupStatus}",
-                                                style: GoogleFonts.poppins(
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "#${data.registerId}",
+                                                    style: GoogleFonts.roboto(
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  Text(
+                                                    "${data.matchupDate}",
+                                                    style: GoogleFonts.roboto(
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w300),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  Text(
+                                                    "${data.matchupStatus}",
+                                                    style: GoogleFonts.roboto(
 // color: Colors.white,
-                                                    color: AppColors.mainColor,
-                                                    fontSize: 12,
-                                                    fontWeight:
-                                                        FontWeight.w300),
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w300),
+                                                  ),
+                                                ],
                                               ),
+                                              Spacer(),
+                                              Container(
+                                                height: 25,
+                                                width: 93,
+                                                alignment: Alignment.center,
+                                                decoration: BoxDecoration(
+                                                    color: Colors.grey[300],
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            32)),
+                                                child: Text(
+                                                  "${data.scoreStaus}",
+                                                  style: GoogleFonts.roboto(
+                                                      color: data.scoreStaus ==
+                                                              "Won"
+                                                          ? Colors.green
+                                                          : data.scoreStaus ==
+                                                                  "Lost"
+                                                              ? Colors.red
+                                                              : Colors.black,
+                                                      fontSize: 11,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              )
                                             ],
                                           ),
-                                          Spacer(),
-                                          Container(
-                                            height: 25,
-                                            width: 93,
-                                            alignment: Alignment.center,
-                                            decoration: BoxDecoration(
-                                                color: Colors.grey[300],
-                                                borderRadius:
-                                                    BorderRadius.circular(32)),
-                                            child: Text(
-                                              "${data.scoreStaus}",
-                                              style: GoogleFonts.poppins(
-                                                // color: Colors.white,
-                                                fontSize: 11,
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Divider(
-                                      thickness: 2,
-                                      color: Colors.white,
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: <Widget>[
-                                        Column(
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Divider(
+                                          thickness: 2,
+                                          color: Colors.white,
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
                                           children: <Widget>[
-                                            Text(
-                                              "Invested",
-                                              style: GoogleFonts.poppins(
-                                                  color: Colors.white,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w300),
-                                            ),
-                                            Row(
+                                            Column(
                                               children: <Widget>[
-                                                Image.asset(
-                                                  "assets/images/coins.png",
-                                                  width: 18,
+                                                Text(
+                                                  "Invested",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.white,
+                                                      fontSize: 11,
+                                                      fontWeight:
+                                                          FontWeight.w300),
+                                                ),
+                                                SizedBox(
+                                                  height: 5,
+                                                ),
+                                                Row(
+                                                  children: <Widget>[
+                                                    Image.asset(
+                                                      "assets/images/coins.png",
+                                                      width: 18,
+                                                    ),
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text(
+                                                      "${data.betAmount}",
+                                                      style: GoogleFonts.roboto(
+                                                          color: Colors.white,
+                                                          fontSize: 13,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    )
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              children: <Widget>[
+                                                Text(
+                                                  "Max payout",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.white,
+                                                      fontSize: 11,
+                                                      fontWeight:
+                                                          FontWeight.w300),
+                                                ),
+                                                SizedBox(
+                                                  height: 5,
+                                                ),
+                                                Row(
+                                                  children: <Widget>[
+                                                    Image.asset(
+                                                      "assets/images/coins.png",
+                                                      width: 18,
+                                                    ),
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text(
+                                                      "${data.returnPayout}",
+                                                      style: GoogleFonts.roboto(
+                                                          color: Colors.white,
+                                                          fontSize: 13,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    )
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              children: <Widget>[
+                                                Text(
+                                                  "Matchups",
+                                                  style: GoogleFonts.roboto(
+                                                      color: Colors.white,
+                                                      fontSize: 11,
+                                                      fontWeight:
+                                                          FontWeight.w300),
                                                 ),
                                                 SizedBox(
                                                   width: 5,
                                                 ),
                                                 Text(
-                                                  "${data.returnPayout}",
-                                                  style: GoogleFonts.poppins(
+                                                  "${data.matchupCount}",
+                                                  style: GoogleFonts.roboto(
                                                       color: Colors.white,
                                                       fontSize: 13,
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 )
                                               ],
-                                            )
-                                          ],
-                                        ),
-                                        Column(
-                                          children: <Widget>[
-                                            Text(
-                                              "Max payout",
-                                              style: GoogleFonts.poppins(
-                                                  color: Colors.white,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w300),
-                                            ),
-                                            Row(
-                                              children: <Widget>[
-                                                Image.asset(
-                                                  "assets/images/coins.png",
-                                                  width: 18,
-                                                ),
-                                                SizedBox(
-                                                  width: 5,
-                                                ),
-                                                Text(
-                                                  "${data.returnPayout}",
-                                                  style: GoogleFonts.poppins(
-                                                      color: Colors.white,
-                                                      fontSize: 13,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                        Column(
-                                          children: <Widget>[
-                                            Text(
-                                              "Matchups",
-                                              style: GoogleFonts.poppins(
-                                                  color: Colors.white,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w300),
-                                            ),
-                                            Text(
-                                              "${data.matchupCount}",
-                                              style: GoogleFonts.poppins(
-                                                  color: Colors.white,
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.bold),
                                             )
                                           ],
                                         )
                                       ],
-                                    )
-                                  ],
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             );
                           },
                         ),

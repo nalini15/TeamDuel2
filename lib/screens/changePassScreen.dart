@@ -123,14 +123,14 @@ class _ChangePasswordState extends State<ChangePassword> {
                         Text(
                           'Password changed successfully',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               color: Colors.green, fontSize: 18),
                         ),
                         buildSizedBox(buildHeight(context), 0.02),
                         Text(
                           'You will be redirected to the login screen now',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               color: Colors.black, fontSize: 16),
                         ),
                         buildSizedBox(buildHeight(context), 0.02),
@@ -162,7 +162,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       alignment: Alignment.topLeft,
                       child: Text(
                         'Enter the OTP sent on ${widget.email}',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             color: Colors.grey, fontSize: 20),
                       ),
                     ),
@@ -190,7 +190,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       wrapAlignment: WrapAlignment.spaceAround,
                       pinBoxDecoration:
                           ProvidedPinBoxDecoration.defaultPinBoxDecoration,
-                      pinTextStyle: GoogleFonts.poppins(
+                      pinTextStyle: GoogleFonts.roboto(
                           fontSize: 30.0, color: Colors.white),
                       pinTextAnimatedSwitcherTransition:
                           ProvidedPinBoxTextAnimation.scalingTransition,
@@ -226,7 +226,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                               onSaved: (val) {
                                 userData['password'] = val.trim();
                               },
-                              style: GoogleFonts.poppins(color: Colors.white),
+                              style: GoogleFonts.roboto(color: Colors.white),
                               decoration: InputDecoration(
                                 fillColor: AppColors.mainColorLight,
                                 filled: true,
@@ -243,7 +243,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                       color: Colors.white,
                                     )),
                                 hintText: 'Password',
-                                hintStyle: GoogleFonts.poppins(
+                                hintStyle: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 12),
                                 focusedBorder: buildOutlineInputBorder(),
                                 border: buildOutlineInputBorder(),
@@ -254,7 +254,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                               obscureText: _confirmPassword,
                               keyboardType: TextInputType.text,
                               cursorColor: Colors.white,
-                              style: GoogleFonts.poppins(color: Colors.white),
+                              style: GoogleFonts.roboto(color: Colors.white),
                               cursorRadius: Radius.circular(10),
                               validator: (val) {
                                 val = val.trim();
@@ -281,7 +281,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                       color: Colors.white,
                                     )),
                                 hintText: 'Confirm Password',
-                                hintStyle: GoogleFonts.poppins(
+                                hintStyle: GoogleFonts.roboto(
                                     color: Colors.white, fontSize: 12),
                                 focusedBorder: buildOutlineInputBorder(),
                                 border: buildOutlineInputBorder(),
@@ -306,7 +306,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                       )
                                     : Text(
                                         'Change Password',
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             color: Colors.white, fontSize: 18),
                                       ),
                               ),
@@ -321,7 +321,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     //     resendOTP(context);
                     //   },
                     //   child: Text('Resend OTP',
-                    //       style: GoogleFonts.poppins(color: Colors.grey, fontSize: 18)),
+                    //       style: GoogleFonts.roboto(color: Colors.grey, fontSize: 18)),
                     // ),
                   ],
                 ),

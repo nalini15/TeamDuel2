@@ -49,19 +49,19 @@ class BWL extends StatelessWidget {
                                   children: <Widget>[
                                     Text(
                                       "MS Dhoni",
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
                                       "India, WK Bat",
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           color: const Color(0xffbb808080),
                                           fontSize: 11),
                                     ),
                                     Text(
                                       "360 pts | 56% selected",
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.roboto(
                                           color: const Color(0xffbb808080),
                                           fontSize: 11),
                                     ),
@@ -69,7 +69,7 @@ class BWL extends StatelessWidget {
                                 ),
                                 Text(
                                   "8.5 CR",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 13),
                                 ),
@@ -95,7 +95,7 @@ class BWL extends StatelessWidget {
             children: <Widget>[
               Text(
                 "Wicket Keeper",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.roboto(
                     fontSize: 13, color: const Color(0xffbb545454)),
               ),
               Icon(FontAwesomeIcons.adjust)
@@ -128,24 +128,24 @@ class BWL extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "MS Dhoni",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontSize: 15, fontWeight: FontWeight.bold),
                       ),
                       Text(
                         "India, WK Bat",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             color: const Color(0xffbb808080), fontSize: 11),
                       ),
                       Text(
                         "360 pts | 56% selected",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             color: const Color(0xffbb808080), fontSize: 11),
                       ),
                     ],
                   ),
                   Text(
                     "8.5 CR",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.roboto(
                         fontWeight: FontWeight.bold, fontSize: 13),
                   ),
                   GestureDetector(

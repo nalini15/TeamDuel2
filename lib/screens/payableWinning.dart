@@ -1,3 +1,4 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -11,6 +12,8 @@ import 'package:winx/providers/user.dart';
 import 'package:winx/screens/getCoins.dart';
 import 'package:winx/screens/paymentWithdraw.dart';
 import 'package:winx/screens/uploadDoc.dart';
+import 'package:winx/services/admob_services.dart';
+import 'package:winx/widgets/cricket/matchups/adBanner.dart';
 
 class PayableWinning extends StatefulWidget {
   PayableWinning({Key key}) : super(key: key);
@@ -51,6 +54,7 @@ class _PayableWinningState extends State<PayableWinning> {
   }
 
   final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
+  final ams = AdmobService();
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +67,7 @@ class _PayableWinningState extends State<PayableWinning> {
         backgroundColor: AppColors.mainColor,
         title: Text(
           "Wallet",
-          style: GoogleFonts.poppins(color: Colors.white),
+          style: GoogleFonts.roboto(color: Colors.white),
         ),
       ),
       body: SafeArea(
@@ -95,7 +99,7 @@ class _PayableWinningState extends State<PayableWinning> {
                       ),
                       child: Text(
                         "Payable Balance",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             color: states.payableWining == 0
                                 ? Colors.black
@@ -121,7 +125,7 @@ class _PayableWinningState extends State<PayableWinning> {
                       alignment: Alignment.center,
                       child: Text(
                         "Winning",
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             color: states.payableWining == 1
                                 ? Colors.black
@@ -150,7 +154,7 @@ class _PayableWinningState extends State<PayableWinning> {
                   states.payableWining == 0
                       ? "${Coins.total}"
                       : "${Chips.total}",
-                  style: GoogleFonts.poppins(color: Colors.white),
+                  style: GoogleFonts.roboto(color: Colors.white),
                 )
               ],
             ),
@@ -163,15 +167,25 @@ class _PayableWinningState extends State<PayableWinning> {
                   Navigator.of(context)
                       .push(FadeNavigation(widget: GetCoinsChips()));
                 } else {
-                  checkKYC(context);
+                  if (Chips.total != "0") {
+                    checkKYC(context);
+                  } else {
+                    showSnack(context, "No Chips", _scaffoldkey);
+                  }
                 }
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all(
                       EdgeInsets.symmetric(horizontal: 30)),
-                  backgroundColor: MaterialStateProperty.all(Colors.green)),
-              child: Text(states.payableWining == 0 ? "Get Coins" : "Withdraw",
-                  style: GoogleFonts.poppins(color: Colors.white)),
+                  backgroundColor: MaterialStateProperty.all(
+                      states.payableWining == 0
+                          ? Colors.green
+                          : Color.fromRGBO(252, 160, 49, 1))),
+              child: Text(
+                  states.payableWining == 0
+                      ? "Get More Coins"
+                      : "Withdraw Fund",
+                  style: GoogleFonts.roboto(color: Colors.white)),
             ),
           ),
           buildSizedBox(buildHeight(context), 0.03),
@@ -214,7 +228,9 @@ class _PayableWinningState extends State<PayableWinning> {
                               child: buildText(
                                   "${DateFormat('dd-M-yyyy').format(DateTime.parse(data.createdAt))}"),
                             ),
-                            SizedBox(width: 30, child: buildText("${data.id}")),
+                            SizedBox(
+                                width: 120,
+                                child: buildText("${data.message}")),
                             SizedBox(
                                 width: 80,
                                 child: buildText("${data.type}", colordynamic)),
@@ -234,7 +250,19 @@ class _PayableWinningState extends State<PayableWinning> {
                         ),
                       );
                     })),
-          )
+          ),
+          Container(
+            width: double.infinity,
+            height: 50,
+            margin: EdgeInsets.symmetric(horizontal: 13),
+            color: Colors.black,
+            child: Center(
+              child: AdBanner(
+                stringKey: ams.getBannerAppId(),
+                size: AdmobBannerSize.FULL_BANNER,
+              ),
+            ),
+          ),
         ],
       )),
     );
@@ -245,6 +273,6 @@ class _PayableWinningState extends State<PayableWinning> {
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         textAlign: TextAlign.left,
-        style: GoogleFonts.poppins(color: color ?? Colors.white),
+        style: GoogleFonts.roboto(color: color ?? Colors.white),
       );
 }

@@ -24,10 +24,10 @@ class _TeamsState extends State<Teams> {
               Text(
                 "IND vs AUS",
                 textAlign: TextAlign.left,
-                style: GoogleFonts.poppins(fontSize: 14),
+                style: GoogleFonts.roboto(fontSize: 14),
               ),
               Text("STARTS IN 03H : 12M : 56s",
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontSize: 12, fontWeight: FontWeight.w300))
             ],
           ),
@@ -61,7 +61,7 @@ class _TeamsState extends State<Teams> {
                               children: <Widget>[
                                 Text(
                                   "Team 1",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontSize: 13,
                                       color: Colors.white,
                                       fontWeight: FontWeight.w500),
@@ -69,7 +69,7 @@ class _TeamsState extends State<Teams> {
                                 Spacer(),
                                 Text(
                                   "Ind (7)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                     fontSize: 12,
                                     color: Colors.white,
                                   ),
@@ -79,7 +79,7 @@ class _TeamsState extends State<Teams> {
                                 ),
                                 Text(
                                   "Aus (4)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                     fontSize: 12,
                                     color: Colors.white,
                                   ),
@@ -111,22 +111,22 @@ class _TeamsState extends State<Teams> {
                               children: <Widget>[
                                 Text(
                                   "WK (1)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: Colors.grey, fontSize: 13),
                                 ),
                                 Text(
                                   "BAT (5)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: Colors.grey, fontSize: 13),
                                 ),
                                 Text(
                                   "BWL (3)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: Colors.grey, fontSize: 13),
                                 ),
                                 Text(
                                   "AR (2)",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       color: Colors.grey, fontSize: 13),
                                 ),
                               ],
@@ -144,21 +144,21 @@ class _TeamsState extends State<Teams> {
                               children: <Widget>[
                                 Text(
                                   "PREVIEW",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xffbbFF4956),
                                       fontSize: 13),
                                 ),
                                 Text(
                                   "EDIT",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xffbbFF4956),
                                       fontSize: 13),
                                 ),
                                 Text(
                                   "CLONE",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xffbbFF4956),
                                       fontSize: 13),
@@ -194,7 +194,7 @@ class _TeamsState extends State<Teams> {
               )),
           child: Text(
             "$name",
-            style: GoogleFonts.poppins(fontSize: 13),
+            style: GoogleFonts.roboto(fontSize: 13),
           ),
         ),
         Positioned(
@@ -206,7 +206,7 @@ class _TeamsState extends State<Teams> {
             alignment: Alignment.center,
             child: Text(
               "$posi",
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 11),

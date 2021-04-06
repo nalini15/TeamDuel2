@@ -72,7 +72,7 @@ class _RaceListState extends State<RaceList> {
                             child: Text(
                               '${items.raceName}',
                               textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.bold, fontSize: 18),
                             ),
                           ),
@@ -88,7 +88,7 @@ class _RaceListState extends State<RaceList> {
                               //   defaultHours: "**",
                               //   defaultMin: "**",
                               //   defaultSec: "**",
-                              //   textStyle: GoogleFonts.poppins(
+                              //   textStyle: GoogleFonts.roboto(
                               //       color: Colors.red, fontSize: 15),
                               // ),
                               Spacer(),

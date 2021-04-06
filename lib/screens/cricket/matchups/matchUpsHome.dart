@@ -60,7 +60,7 @@ void _modalBottomSheetMenu(BuildContext context) {
             alignment: Alignment.center,
             child: Text(
               "Summary",
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -79,7 +79,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                         children: <Widget>[
                           Text(
                             "I bet",
-                            style: GoogleFonts.poppins(),
+                            style: GoogleFonts.roboto(),
                           ),
                           Row(
                             children: <Widget>[
@@ -100,7 +100,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                                   child: Text(
                                     "-",
                                     textAlign: TextAlign.center,
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: AppColors.mainColor),
                                   ),
                                 ),
@@ -116,7 +116,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                                 width: 5,
                               ),
                               Text("10",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold)),
                               SizedBox(
@@ -139,7 +139,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                                   child: Text(
                                     "+",
                                     textAlign: TextAlign.center,
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.roboto(
                                         color: AppColors.mainColor),
                                   ),
                                 ),
@@ -152,7 +152,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                         children: <Widget>[
                           Text(
                             "To win",
-                            style: GoogleFonts.poppins(),
+                            style: GoogleFonts.roboto(),
                           ),
                           Row(
                             children: <Widget>[
@@ -164,7 +164,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                                 width: 5,
                               ),
                               Text("10",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.roboto(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold)),
                             ],
@@ -197,7 +197,7 @@ void _modalBottomSheetMenu(BuildContext context) {
                               padding: EdgeInsets.all(6),
                               child: Text(
                                 "VS",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontSize: 12, color: Colors.black),
                               ),
                             ),
@@ -228,7 +228,7 @@ void _modalBottomSheetMenu(BuildContext context) {
               ),
               child: Text(
                 "Confirm and Submit",
-                style: GoogleFonts.poppins(color: Colors.white),
+                style: GoogleFonts.roboto(color: Colors.white),
               ),
             ),
           )
@@ -453,7 +453,10 @@ class _MatchUpHomeState extends State<MatchUpHome>
                       key: scratchKey,
                       brushSize: 55,
                       threshold: 60,
-                      color: AppColors.mainColor,
+                      color: Colors.red,
+                      image: Image.asset(
+                        "assets/images/scratchCard.png",
+                      ),
                       onChange: (value) {},
                       onThreshold: () {
                         scratchKey.currentState
@@ -462,22 +465,15 @@ class _MatchUpHomeState extends State<MatchUpHome>
                       },
                       child: Container(
                         alignment: Alignment.center,
-                        color: AppColors.mainColorLight,
+                        color: Colors.grey,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              "assets/images/teamduel.png",
-                              width: 200,
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
                             Text(
-                              "YOU WON",
-                              style: GoogleFonts.poppins(
-                                  fontSize: 18,
-                                  color: Colors.white,
+                              "You have Earned",
+                              style: GoogleFonts.roboto(
+                                  fontSize: 25,
+                                  color: AppColors.mainColorLight,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
@@ -487,9 +483,19 @@ class _MatchUpHomeState extends State<MatchUpHome>
                               matchups.scratchCardLoading
                                   ? "Loading...."
                                   : "${matchups.scratchCard[0].expireStatus}",
-                              style: GoogleFonts.poppins(
-                                  fontSize: 22,
-                                  color: Colors.white,
+                              style: GoogleFonts.roboto(
+                                  fontSize: 25,
+                                  color: Colors.yellow,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Play Coins",
+                              style: GoogleFonts.roboto(
+                                  fontSize: 25,
+                                  color: AppColors.mainColorLight,
                                   fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -552,11 +558,11 @@ class _MatchUpHomeState extends State<MatchUpHome>
                   title: todayTomm.isEmpty
                       ? Text(
                           "${formatter.format(date)}",
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.roboto(color: Colors.white),
                         )
                       : Text(
                           "$todayTomm",
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.roboto(color: Colors.white),
                         ),
                   onTap: () {
                     matchupDate.changeSelectedDate(
@@ -651,12 +657,12 @@ class _MatchUpHomeState extends State<MatchUpHome>
                 //     Tab(
                 //         child: Text(
                 //       "Cricket",
-                //       style: GoogleFonts.poppins(),
+                //       style: GoogleFonts.roboto(),
                 //     )),
                 //     Tab(
                 //       child: Text(
                 //         "Horse Racing",
-                //         style: GoogleFonts.poppins(),
+                //         style: GoogleFonts.roboto(),
                 //       ),
                 //     ),
                 //   ],
@@ -686,49 +692,46 @@ class _MatchUpHomeState extends State<MatchUpHome>
                   //       Text(
                   //         Coins.total == null ? '0' : Coins.total,
                   //         overflow: TextOverflow.ellipsis,
-                  //         style: GoogleFonts.poppins(
+                  //         style: GoogleFonts.roboto(
                   //             color: Colors.black, fontSize: 12),
                   //       ),
                   //     ],
                   //   ),
                   // ),
                   // buildSizedBoxWidth(buildWidth(context), 0.06),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                    margin: EdgeInsets.symmetric(vertical: 12),
-                    height: 29,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/toppngBig.png',
-                          width: 15,
-                          height: 15,
-                        ),
-                        SizedBox(
-                          width: 2,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                                DownSlideNavigation(widget: PayableWinning()));
-                          },
-                          child: Text(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(DownSlideNavigation(widget: PayableWinning()));
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 2),
+                      margin: EdgeInsets.symmetric(vertical: 12),
+                      height: 29,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(
+                              color: AppColors.mainColorLight, width: 1)),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/images/toppngBig.png',
+                            width: 15,
+                            height: 15,
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Text(
                             Coins.total == null ? '0' : Coins.total,
                             overflow: TextOverflow.ellipsis,
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 color: Colors.white, fontSize: 9),
                           ),
-                        ),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.chevronDown,
-                          color: Colors.white,
-                          size: 8,
-                        )
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   // Spacer(),
@@ -754,7 +757,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                         child: Icon(
                           FontAwesomeIcons.plusCircle,
                           size: 15,
-                          color: Color.fromRGBO(16, 119, 194, 1),
+                          color: Color.fromRGBO(0, 174, 239, 1),
                         )),
                   ),
                   SizedBox(
@@ -801,11 +804,11 @@ class _MatchUpHomeState extends State<MatchUpHome>
                         children: <Widget>[
                           // Text(
                           //   "Match Ups",
-                          //   style: GoogleFonts.poppins(
+                          //   style: GoogleFonts.roboto(
                           //       fontWeight: FontWeight.bold, fontSize: 13),
                           // ),
                           Image.asset(
-                            "assets/images/teamduel.png",
+                            "assets/images/TeamDuel2.png",
                             width: 100,
                           )
                           // SizedBox(
@@ -846,8 +849,8 @@ class _MatchUpHomeState extends State<MatchUpHome>
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Joint Match Ups",
-                      style: GoogleFonts.poppins(
+                      "MY MATCHUP",
+                      style: GoogleFonts.roboto(
                           fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     // GestureDetector(
@@ -858,7 +861,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                     //     children: <Widget>[
                     //       Text(
                     //         "Match Ups",
-                    //         style: GoogleFonts.poppins(
+                    //         style: GoogleFonts.roboto(
                     //             fontWeight: FontWeight.bold, fontSize: 15),
                     //       ),
                     //       SizedBox(
@@ -874,11 +877,11 @@ class _MatchUpHomeState extends State<MatchUpHome>
                     // buildSizedBoxWidth(buildWidth(context), 0.10),
                     // Text(
                     //   "MYTEAM ",
-                    //   style: GoogleFonts.poppins(fontSize: 10),
+                    //   style: GoogleFonts.roboto(fontSize: 10),
                     // ),
                     // Text(
                     //   "DUEL",
-                    //   style: GoogleFonts.poppins(
+                    //   style: GoogleFonts.roboto(
                     //       color: Color.fromRGBO(249, 223, 65, 1), fontSize: 10),
                     // ),
                     Spacer(),
@@ -901,111 +904,114 @@ class _MatchUpHomeState extends State<MatchUpHome>
                                   MatchupSections.joinedmatchups
                               ? "Lobby"
                               : "Jointed (0)",
-                          style: GoogleFonts.poppins(fontSize: 12),
+                          style: GoogleFonts.roboto(fontSize: 12),
                         ),
                       ),
                     )
                   ],
                 ),
               ),
-        bottomSheet: states.matchupSection == MatchupSections.lobbymatchup
-            ? Container(
-                height: 75,
-                alignment: Alignment.center,
-                width: double.infinity,
-                color: Colors.black,
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                child: AdmobBanner(
-                  adUnitId: ams.getBannerAppId(),
-                  adSize: AdmobBannerSize.FULL_BANNER,
-                )
-                //  Row(
-                //   children: <Widget>[
-                //     Column(
-                //       mainAxisAlignment: MainAxisAlignment.center,
-                //       children: <Widget>[
-                //         GestureDetector(
-                //           onTap: () {
-                //             states.clearData();
-                //           },
-                //           child: Container(
-                //             padding: EdgeInsets.symmetric(
-                //                 horizontal: 20, vertical: 10),
-                //             decoration: BoxDecoration(
-                //                 border: Border.all(
-                //                     width: 1,
-                //                     color: Color.fromRGBO(16, 119, 194, 1)),
-                //                 borderRadius: BorderRadius.circular(13)),
-                //             child: Row(
-                //               children: <Widget>[
-                //                 Text(
-                //                   "Clear Selected",
-                //                   style: GoogleFonts.poppins(
-                //                       fontSize: 13, color: Colors.white),
-                //                 ),
-                //                 SizedBox(
-                //                   width: 10,
-                //                 ),
-                //                 Text(
-                //                   "${states.cricketMatchups.toList().length + states.horseMatchups.toList().length + states.houndMatchups.toList().length}",
-                //                   style: GoogleFonts.poppins(
-                //                       fontSize: 13,
-                //                       fontWeight: FontWeight.bold,
-                //                       color: Colors.white),
-                //                 ),
-                //               ],
-                //             ),
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //     buildSizedBoxWidth(buildWidth(context), 0.02),
-                //     Consumer<MatchupsCrickets>(
-                //       builder: (con, matchup, _) => matchup.submitLoading
-                //           ? Expanded(
-                //               child: Container(
-                //                   // width: 200,
-                //                   alignment: Alignment.center,
-                //                   child: CircularProgressIndicator()),
-                //             )
-                //           : Expanded(
-                //               // width: 200,
-                //               child: states.cricketMatchups.toList().length +
-                //                           states.horseMatchups.toList().length +
-                //                           states.houndMatchups
-                //                               .toList()
-                //                               .length ==
-                //                       0
-                //                   ? Container()
-                //                   : RaisedButton(
-                //                       color: Color.fromRGBO(16, 119, 194, 1),
-                //                       shape: RoundedRectangleBorder(
-                //                           borderRadius:
-                //                               BorderRadius.circular(13)),
-                //                       onPressed: () {
-                //                         // _modalBottomSheetMenu(context);
-                //                         // submitMatchups();
-                //                         getMaxPayout(
-                //                             states.investType ==
-                //                                     InvestType.chips
-                //                                 ? "chips"
-                //                                 : "coins",
-                //                             true);
-                //                       },
-                //                       child: Text("Submit",
-                //                           style: GoogleFonts.poppins(
-                //                             fontSize: 15,
-                //                             color: Colors.white,
-                //                           )),
-                //                     ),
-                //             ),
-                //     )
-                //   ],
-                // ),
-                )
-            : Container(
-                height: 0,
-              ),
+        bottomSheet:
+            // states.matchupSection == MatchupSections.lobbymatchup
+            //     ?
+            Container(
+          height: 75,
+          alignment: Alignment.center,
+          width: double.infinity,
+          color: Colors.black,
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          child: AdmobBanner(
+            adUnitId: ams.getBannerAppId(),
+            adSize: AdmobBannerSize.FULL_BANNER,
+          ),
+        ),
+        //  Row(
+        //   children: <Widget>[
+        //     Column(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       children: <Widget>[
+        //         GestureDetector(
+        //           onTap: () {
+        //             states.clearData();
+        //           },
+        //           child: Container(
+        //             padding: EdgeInsets.symmetric(
+        //                 horizontal: 20, vertical: 10),
+        //             decoration: BoxDecoration(
+        //                 border: Border.all(
+        //                     width: 1,
+        //                     color: Color.fromRGBO(16, 119, 194, 1)),
+        //                 borderRadius: BorderRadius.circular(13)),
+        //             child: Row(
+        //               children: <Widget>[
+        //                 Text(
+        //                   "Clear Selected",
+        //                   style: GoogleFonts.roboto(
+        //                       fontSize: 13, color: Colors.white),
+        //                 ),
+        //                 SizedBox(
+        //                   width: 10,
+        //                 ),
+        //                 Text(
+        //                   "${states.cricketMatchups.toList().length + states.horseMatchups.toList().length + states.houndMatchups.toList().length}",
+        //                   style: GoogleFonts.roboto(
+        //                       fontSize: 13,
+        //                       fontWeight: FontWeight.bold,
+        //                       color: Colors.white),
+        //                 ),
+        //               ],
+        //             ),
+        //           ),
+        //         ),
+        //       ],
+        //     ),
+        //     buildSizedBoxWidth(buildWidth(context), 0.02),
+        //     Consumer<MatchupsCrickets>(
+        //       builder: (con, matchup, _) => matchup.submitLoading
+        //           ? Expanded(
+        //               child: Container(
+        //                   // width: 200,
+        //                   alignment: Alignment.center,
+        //                   child: CircularProgressIndicator()),
+        //             )
+        //           : Expanded(
+        //               // width: 200,
+        //               child: states.cricketMatchups.toList().length +
+        //                           states.horseMatchups.toList().length +
+        //                           states.houndMatchups
+        //                               .toList()
+        //                               .length ==
+        //                       0
+        //                   ? Container()
+        //                   : RaisedButton(
+        //                       color: Color.fromRGBO(16, 119, 194, 1),
+        //                       shape: RoundedRectangleBorder(
+        //                           borderRadius:
+        //                               BorderRadius.circular(13)),
+        //                       onPressed: () {
+        //                         // _modalBottomSheetMenu(context);
+        //                         // submitMatchups();
+        //                         getMaxPayout(
+        //                             states.investType ==
+        //                                     InvestType.chips
+        //                                 ? "chips"
+        //                                 : "coins",
+        //                             true);
+        //                       },
+        //                       child: Text("Submit",
+        //                           style: GoogleFonts.roboto(
+        //                             fontSize: 15,
+        //                             color: Colors.white,
+        //                           )),
+        //                     ),
+        //             ),
+        //     )
+        //   ],
+        // ),
+        // )
+        // : Container(
+        //     height: 0,
+        //   ),
         floatingActionButton:
             states.matchupSection == MatchupSections.lobbymatchup &&
                     states.cricketMatchups.toList().length +
@@ -1022,7 +1028,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                       children: [
                         Text(
                           "Submit (${states.cricketMatchups.toList().length + states.horseMatchups.toList().length + states.houndMatchups.toList().length})",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
@@ -1115,7 +1121,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                                                 child: Text(
                                                   "${matchups.selecteddateFor[states.selectionScreen - 1]}",
                                                   textAlign: TextAlign.center,
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.roboto(
                                                       fontSize: 13,
                                                       color: Colors.white),
                                                 ),
@@ -1152,7 +1158,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                                       },
                                       child: Text(
                                         "How to play",
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.roboto(
                                             fontSize: 13, color: Colors.white),
                                       ),
                                     ),
@@ -1197,7 +1203,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                                         ),
                                         Text(
                                           data['title'],
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                               fontSize: 18,
                                               color: isSelected
                                                   ? Colors.white
@@ -1233,7 +1239,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
                         //   child: Center(
                         //     child: Text(
                         //       "Admob",
-                        //       style: GoogleFonts.poppins(color: Colors.white),
+                        //       style: GoogleFonts.roboto(color: Colors.white),
                         //     ),
                         //   ),
                         //   // child: ,
@@ -1283,7 +1289,7 @@ class _MatchUpHomeState extends State<MatchUpHome>
             child: Text(
               "$title",
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 12,
                   color: isActive ? AppColors.mainColor : Colors.grey),
             ),

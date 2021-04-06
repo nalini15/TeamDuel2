@@ -33,18 +33,18 @@ class _LeagueInfoState extends State<LeagueInfo> with TickerProviderStateMixin {
             Tab(
                 child: Text(
               "Prize Pool",
-              style: GoogleFonts.poppins(),
+              style: GoogleFonts.roboto(),
             )),
             Tab(
               child: Text(
                 "Matches",
-                style: GoogleFonts.poppins(),
+                style: GoogleFonts.roboto(),
               ),
             ),
             Tab(
               child: Text(
                 "Rules",
-                style: GoogleFonts.poppins(),
+                style: GoogleFonts.roboto(),
               ),
             ),
           ],

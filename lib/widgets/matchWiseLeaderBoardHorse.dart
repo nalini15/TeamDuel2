@@ -54,7 +54,7 @@ class _MatchWiseLeaderBoardHorseState extends State<MatchWiseLeaderBoardHorse> {
                               filled: true,
                               fillColor: Colors.white,
                               errorStyle:
-                                  GoogleFonts.poppins(color: Colors.yellow),
+                                  GoogleFonts.roboto(color: Colors.yellow),
                             ),
                             items: listUserType.map((map) {
                               return DropdownMenuItem(
@@ -67,7 +67,7 @@ class _MatchWiseLeaderBoardHorseState extends State<MatchWiseLeaderBoardHorse> {
                         child: Text(
                           'India- Hyderabad Race\nStatus: Completed',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(height: 1.5, fontSize: 15),
+                          style: GoogleFonts.roboto(height: 1.5, fontSize: 15),
                         ))
                   ])),
           buildSizedBox(buildHeight(context), 0.02),

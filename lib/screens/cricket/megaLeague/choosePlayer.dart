@@ -76,10 +76,10 @@ class _SelectPlayerState extends State<SelectPlayer> {
             children: <Widget>[
               Text(
                 "Choose Players",
-                style: GoogleFonts.poppins(fontSize: 14),
+                style: GoogleFonts.roboto(fontSize: 14),
               ),
               Text("IND vs AUS STARTS IN 03H : 12M : 56s",
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontSize: 12, fontWeight: FontWeight.w300))
             ],
           ),
@@ -163,7 +163,7 @@ class _SelectPlayerState extends State<SelectPlayer> {
                           children: <Widget>[
                             Text(
                               "100 CR",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                             SizedBox(
@@ -173,12 +173,12 @@ class _SelectPlayerState extends State<SelectPlayer> {
                               ),
                             ),
                             Text("${player.totalPlayers}/11",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.roboto(
                                     fontWeight: FontWeight.bold, fontSize: 15))
                           ],
                         ),
                         Text("Ind 3 | Aus 4",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 color: const Color(0xffbb333333),
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12))
@@ -250,7 +250,7 @@ class _SelectPlayerState extends State<SelectPlayer> {
                         ),
                         child: Text(
                           "NEXT",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.roboto(
                               color: Colors.white,
                               fontSize: 11,
                               fontWeight: FontWeight.bold),
@@ -285,7 +285,7 @@ class _SelectPlayerState extends State<SelectPlayer> {
             child: Text(
               "$title",
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                   fontSize: 12,
                   color: isActive ? AppColors.mainColor : Colors.grey),
             ),
