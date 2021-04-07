@@ -174,6 +174,7 @@ class RaceDetails {
   String raceLocation;
   String raceCountry;
   String raceStatus;
+  String winStatus;
 
   RaceDetails(
       {this.raceId,
@@ -183,6 +184,7 @@ class RaceDetails {
       this.raceEndTime,
       this.raceLocation,
       this.raceCountry,
+      this.winStatus,
       this.raceStatus});
 
   RaceDetails.fromJson(Map<String, dynamic> json) {
@@ -194,6 +196,7 @@ class RaceDetails {
     raceLocation = json['race_location'].toString();
     raceCountry = json['race_country'].toString();
     raceStatus = json['race_status'].toString();
+    raceStatus = json['win_status'].toString();
   }
 
   Map<String, dynamic> toJson() {

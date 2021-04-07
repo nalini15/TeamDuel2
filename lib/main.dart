@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:admob_flutter/admob_flutter.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
@@ -62,10 +63,42 @@ Future<void> main() async {
   };
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   Future<void> _isLogin(BuildContext context) {
     final auth = Provider.of<Auth>(context, listen: false);
+  }
+
+  String _message = '';
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  _register() {
+    _firebaseMessaging.getToken().then((token) => print(token));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getMessage();
+    _register();
+  }
+
+  void getMessage() {
+    _firebaseMessaging.configure(
+        onMessage: (Map<String, dynamic> message) async {
+      print('on message $message');
+      setState(() => _message = message["notification"]["title"]);
+    }, onResume: (Map<String, dynamic> message) async {
+      print('on resume $message');
+      setState(() => _message = message["notification"]["title"]);
+    }, onLaunch: (Map<String, dynamic> message) async {
+      print('on launch $message');
+      setState(() => _message = message["notification"]["title"]);
+    });
   }
 
   @override

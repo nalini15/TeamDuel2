@@ -311,14 +311,21 @@ class _MyMatchUpsState extends State<MyMatchUps> {
                                                             )));
                                                           }
                                                         },
-                                                        child: Text(
-                                                            "${matchupOne.horseName}",
-                                                            style: GoogleFonts
-                                                                .poppins(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 12,
-                                                            )),
+                                                        child: Container(
+                                                          width: 70,
+                                                          child: Text(
+                                                              "${matchupOne.horseName}",
+                                                              maxLines: 1,
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              style: GoogleFonts
+                                                                  .poppins(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 12,
+                                                              )),
+                                                        ),
                                                       ),
                                                       SizedBox(
                                                         width: 2,
